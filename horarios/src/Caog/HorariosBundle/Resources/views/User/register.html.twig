@@ -1,0 +1,33 @@
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% block body %}
+    <h1>Registrar usuario</h1>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    
+    {{ form_errors(form.nombre) }}
+    <div class=" col-md-6">
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.nombre) }}</span>
+        {{ form_widget(form.nombre, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+    </div></div>
+    
+    {{ form_errors(form.apellidos) }}
+    <div class=" col-md-6">
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.apellidos) }}</span>
+        {{ form_widget(form.apellidos, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+    </div></div>
+    
+    {{ form_errors(form.edad) }}
+    <div class=" col-md-12">
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.edad) }}</span>
+        {{ form_widget(form.edad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+    </div>
+    
+    {{ form_widget(form.save, { 'attr': {'class': 'btn btn-success col-md-12'} }) }}
+    </div>
+    
+    {{ form_end(form) }}
+    
+{% endblock %}

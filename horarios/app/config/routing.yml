@@ -1,0 +1,4 @@
+caog_horarios:
+    resource: "@CaogHorariosBundle/Resources/config/routing.yml"
+    prefix:   /
+

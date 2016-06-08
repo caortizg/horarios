@@ -1,0 +1,6 @@
+caog_horarios_homepage:
+    path:     /
+    defaults: { _controller: CaogHorariosBundle:Default:index }
+user_register:
+    path: /user/register
+    defaults: { _controller: CaogHorariosBundle:Usuario:registrar}
