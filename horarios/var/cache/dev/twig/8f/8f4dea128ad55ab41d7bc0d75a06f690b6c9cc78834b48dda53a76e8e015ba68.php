@@ -7,8 +7,8 @@ class __TwigTemplate_7f06f80287f98d3a7f28ec3388971a6681374860a632d5ace6088491545
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User:register.html.twig", 1);
+        // line 2
+        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User:register.html.twig", 2);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,94 +21,193 @@ class __TwigTemplate_7f06f80287f98d3a7f28ec3388971a6681374860a632d5ace6088491545
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_46b9add07f13ade302007aa4f5784859112c8b4a4d99c0310448fc9dbccc4bda = $this->env->getExtension("native_profiler");
-        $__internal_46b9add07f13ade302007aa4f5784859112c8b4a4d99c0310448fc9dbccc4bda->enter($__internal_46b9add07f13ade302007aa4f5784859112c8b4a4d99c0310448fc9dbccc4bda_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:register.html.twig"));
+        $__internal_268fe0ca3df3d24ed55901b71f53f47bfb853074b4ab1f86121f7b4ab5ee907b = $this->env->getExtension("native_profiler");
+        $__internal_268fe0ca3df3d24ed55901b71f53f47bfb853074b4ab1f86121f7b4ab5ee907b->enter($__internal_268fe0ca3df3d24ed55901b71f53f47bfb853074b4ab1f86121f7b4ab5ee907b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:register.html.twig"));
 
+        // line 1
+        $context["titleBody"] = "Registrar usuario";
+        // line 2
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_46b9add07f13ade302007aa4f5784859112c8b4a4d99c0310448fc9dbccc4bda->leave($__internal_46b9add07f13ade302007aa4f5784859112c8b4a4d99c0310448fc9dbccc4bda_prof);
+        $__internal_268fe0ca3df3d24ed55901b71f53f47bfb853074b4ab1f86121f7b4ab5ee907b->leave($__internal_268fe0ca3df3d24ed55901b71f53f47bfb853074b4ab1f86121f7b4ab5ee907b_prof);
 
     }
 
-    // line 2
+    // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_895bd48ef6893ea61b3503ed724966d2dc34c4b1d0608015e365831da047e3d5 = $this->env->getExtension("native_profiler");
-        $__internal_895bd48ef6893ea61b3503ed724966d2dc34c4b1d0608015e365831da047e3d5->enter($__internal_895bd48ef6893ea61b3503ed724966d2dc34c4b1d0608015e365831da047e3d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_42ffb087616c77d82bd0bcd970836a586adfc36d351a83272c440620241b5b25 = $this->env->getExtension("native_profiler");
+        $__internal_42ffb087616c77d82bd0bcd970836a586adfc36d351a83272c440620241b5b25->enter($__internal_42ffb087616c77d82bd0bcd970836a586adfc36d351a83272c440620241b5b25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
-        echo "    <h1>Registrar usuario</h1>
-    ";
         // line 4
+        echo "    ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
     ";
         // line 5
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
-    
-    ";
-        // line 7
+
+    <div class=\"panel panel-default\">
+        <div class=\"panel-heading\">Datos personales</div>
+        <div class=\"panel-body\">
+            <div class=\"row\">
+                ";
+        // line 11
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'errors');
         echo "
-    <div class=\" col-md-6\">
-    <div class=\"input-group\">
-        <span class=\"input-group-addon\" id=\"basic-addon3\">";
-        // line 10
+                <div class=\" col-md-6\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 14
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'label');
         echo "</span>
-        ";
-        // line 11
+                        ";
+        // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'widget', array("attr" => array("class" => "form-control col-md-6", "aria-describedby" => "basic-addon3")));
         echo "
-    </div></div>
-    
-    ";
-        // line 14
+                    </div></div>
+
+                ";
+        // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "apellidos", array()), 'errors');
         echo "
-    <div class=\" col-md-6\">
-    <div class=\"input-group\">
-        <span class=\"input-group-addon\" id=\"basic-addon3\">";
-        // line 17
+                <div class=\" col-md-6\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 21
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "apellidos", array()), 'label');
         echo "</span>
-        ";
-        // line 18
+                        ";
+        // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "apellidos", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
         echo "
-    </div></div>
-    
-    ";
-        // line 21
+                    </div></div>
+            </div><br>
+            <div class=\"row\">
+                ";
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "edad", array()), 'errors');
         echo "
-    <div class=\" col-md-12\">
-    <div class=\"input-group\">
-        <span class=\"input-group-addon\" id=\"basic-addon3\">";
-        // line 24
+                <div class=\" col-md-12\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 29
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "edad", array()), 'label');
         echo "</span>
-        ";
-        // line 25
+                        ";
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "edad", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
         echo "
+                    </div></div>
+            </div><br>
+        </div>
     </div>
-    
+
+    <div class=\"panel panel-default\">
+        <div class=\"panel-heading\">Datos de residencia</div>
+        <div class=\"panel-body\">
+            <div class=\"row\">
+                ";
+        // line 40
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "pais", array()), 'errors');
+        echo "
+                <div class=\" col-md-4\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "pais", array()), 'label');
+        echo "</span>
+                        ";
+        // line 44
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "pais", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
+        echo "
+                    </div></div>
+
+                ";
+        // line 47
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "departamento", array()), 'errors');
+        echo "
+                <div class=\" col-md-4\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 50
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "departamento", array()), 'label');
+        echo "</span>
+                        ";
+        // line 51
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "departamento", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
+        echo "
+                    </div></div>
+
+                ";
+        // line 54
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ciudad", array()), 'errors');
+        echo "
+                <div class=\" col-md-4\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 57
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ciudad", array()), 'label');
+        echo "</span>
+                        ";
+        // line 58
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ciudad", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
+        echo "
+                    </div></div>
+            </div><br>
+            <div class=\"row\">
+                ";
+        // line 62
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "localidad", array()), 'errors');
+        echo "
+                <div class=\" col-md-6\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 65
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "localidad", array()), 'label');
+        echo "</span>
+                        ";
+        // line 66
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "localidad", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
+        echo "
+                    </div></div>
+
+                ";
+        // line 69
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "direccion", array()), 'errors');
+        echo "
+                <div class=\" col-md-6\">
+                    <div class=\"input-group\">
+                        <span class=\"input-group-addon\" id=\"basic-addon3\">";
+        // line 72
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "direccion", array()), 'label');
+        echo "</span>
+                        ";
+        // line 73
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "direccion", array()), 'widget', array("attr" => array("class" => "form-control", "aria-describedby" => "basic-addon3")));
+        echo "
+                    </div></div>
+            </div><br>
+        </div>
+    </div>
+
+
+
     ";
-        // line 28
+        // line 81
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-success col-md-12")));
         echo "
-    </div>
-    
-    ";
-        // line 31
+</div>
+
+";
+        // line 84
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-    
+
 ";
         
-        $__internal_895bd48ef6893ea61b3503ed724966d2dc34c4b1d0608015e365831da047e3d5->leave($__internal_895bd48ef6893ea61b3503ed724966d2dc34c4b1d0608015e365831da047e3d5_prof);
+        $__internal_42ffb087616c77d82bd0bcd970836a586adfc36d351a83272c440620241b5b25->leave($__internal_42ffb087616c77d82bd0bcd970836a586adfc36d351a83272c440620241b5b25_prof);
 
     }
 
@@ -124,39 +223,92 @@ class __TwigTemplate_7f06f80287f98d3a7f28ec3388971a6681374860a632d5ace6088491545
 
     public function getDebugInfo()
     {
-        return array (  106 => 31,  100 => 28,  94 => 25,  90 => 24,  84 => 21,  78 => 18,  74 => 17,  68 => 14,  62 => 11,  58 => 10,  52 => 7,  47 => 5,  43 => 4,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  205 => 84,  199 => 81,  188 => 73,  184 => 72,  178 => 69,  172 => 66,  168 => 65,  162 => 62,  155 => 58,  151 => 57,  145 => 54,  139 => 51,  135 => 50,  129 => 47,  123 => 44,  119 => 43,  113 => 40,  100 => 30,  96 => 29,  90 => 26,  83 => 22,  79 => 21,  73 => 18,  67 => 15,  63 => 14,  57 => 11,  48 => 5,  43 => 4,  37 => 3,  30 => 2,  28 => 1,  11 => 2,);
     }
 }
+/* {% set titleBody = 'Registrar usuario' %}*/
 /* {% extends 'CaogHorariosBundle::layout.html.twig' %}*/
 /* {% block body %}*/
-/*     <h1>Registrar usuario</h1>*/
 /*     {{ form_start(form) }}*/
 /*     {{ form_errors(form) }}*/
-/*     */
-/*     {{ form_errors(form.nombre) }}*/
-/*     <div class=" col-md-6">*/
-/*     <div class="input-group">*/
-/*         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.nombre) }}</span>*/
-/*         {{ form_widget(form.nombre, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}*/
-/*     </div></div>*/
-/*     */
-/*     {{ form_errors(form.apellidos) }}*/
-/*     <div class=" col-md-6">*/
-/*     <div class="input-group">*/
-/*         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.apellidos) }}</span>*/
-/*         {{ form_widget(form.apellidos, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
-/*     </div></div>*/
-/*     */
-/*     {{ form_errors(form.edad) }}*/
-/*     <div class=" col-md-12">*/
-/*     <div class="input-group">*/
-/*         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.edad) }}</span>*/
-/*         {{ form_widget(form.edad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/* */
+/*     <div class="panel panel-default">*/
+/*         <div class="panel-heading">Datos personales</div>*/
+/*         <div class="panel-body">*/
+/*             <div class="row">*/
+/*                 {{ form_errors(form.nombre) }}*/
+/*                 <div class=" col-md-6">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.nombre) }}</span>*/
+/*                         {{ form_widget(form.nombre, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/* */
+/*                 {{ form_errors(form.apellidos) }}*/
+/*                 <div class=" col-md-6">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.apellidos) }}</span>*/
+/*                         {{ form_widget(form.apellidos, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/*             </div><br>*/
+/*             <div class="row">*/
+/*                 {{ form_errors(form.edad) }}*/
+/*                 <div class=" col-md-12">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.edad) }}</span>*/
+/*                         {{ form_widget(form.edad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/*             </div><br>*/
+/*         </div>*/
 /*     </div>*/
-/*     */
+/* */
+/*     <div class="panel panel-default">*/
+/*         <div class="panel-heading">Datos de residencia</div>*/
+/*         <div class="panel-body">*/
+/*             <div class="row">*/
+/*                 {{ form_errors(form.pais) }}*/
+/*                 <div class=" col-md-4">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.pais) }}</span>*/
+/*                         {{ form_widget(form.pais, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/* */
+/*                 {{ form_errors(form.departamento) }}*/
+/*                 <div class=" col-md-4">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.departamento) }}</span>*/
+/*                         {{ form_widget(form.departamento, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/* */
+/*                 {{ form_errors(form.ciudad) }}*/
+/*                 <div class=" col-md-4">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.ciudad) }}</span>*/
+/*                         {{ form_widget(form.ciudad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/*             </div><br>*/
+/*             <div class="row">*/
+/*                 {{ form_errors(form.localidad) }}*/
+/*                 <div class=" col-md-6">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.localidad) }}</span>*/
+/*                         {{ form_widget(form.localidad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/* */
+/*                 {{ form_errors(form.direccion) }}*/
+/*                 <div class=" col-md-6">*/
+/*                     <div class="input-group">*/
+/*                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.direccion) }}</span>*/
+/*                         {{ form_widget(form.direccion, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}*/
+/*                     </div></div>*/
+/*             </div><br>*/
+/*         </div>*/
+/*     </div>*/
+/* */
+/* */
+/* */
 /*     {{ form_widget(form.save, { 'attr': {'class': 'btn btn-success col-md-12'} }) }}*/
-/*     </div>*/
-/*     */
-/*     {{ form_end(form) }}*/
-/*     */
+/* </div>*/
+/* */
+/* {{ form_end(form) }}*/
+/* */
 /* {% endblock %}*/

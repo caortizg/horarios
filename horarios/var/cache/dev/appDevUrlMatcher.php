@@ -109,9 +109,30 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\DefaultController::indexAction',  '_route' => 'caog_horarios_homepage',);
         }
 
-        // user_register
-        if ($pathinfo === '/user/register') {
-            return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::registrarAction',  '_route' => 'user_register',);
+        if (0 === strpos($pathinfo, '/user')) {
+            // caog_horarios_user_register
+            if ($pathinfo === '/user/register') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::registrarAction',  '_route' => 'caog_horarios_user_register',);
+            }
+
+            // caog_horarios_user_list
+            if ($pathinfo === '/user/list') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::listAction',  '_route' => 'caog_horarios_user_list',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/empresa')) {
+            // caog_horarios_empresa_register
+            if ($pathinfo === '/empresa/register') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\EmpresaController::registrarAction',  '_route' => 'caog_horarios_empresa_register',);
+            }
+
+            // caog_horarios_empresa_list
+            if ($pathinfo === '/empresa/list') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\EmpresaController::listAction',  '_route' => 'caog_horarios_empresa_list',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

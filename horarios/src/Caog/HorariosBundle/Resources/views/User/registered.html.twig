@@ -1,0 +1,46 @@
+{% set titleBody = 'Resumen del registro' %}
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% block body %}
+    <div class="panel panel-success">
+        <div class="panel-heading">Datos personales</div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Nombre</b></div>
+                <div class="col-md-9">{{usuario.getNombre()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Apellidos</b></div>
+                <div class="col-md-9">{{usuario.getApellidos()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Edad</b></div>
+                <div class="col-md-9">{{usuario.getEdad()}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">Datos de localizacion</div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Pais</b></div>
+                <div class="col-md-9">{{usuario.getPais()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Departamento</b></div>
+                <div class="col-md-9">{{usuario.getDepartamento()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Ciudad</b></div>
+                <div class="col-md-9">{{usuario.getCiudad()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Localidad</b></div>
+                <div class="col-md-9">{{usuario.getLocalidad()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Dirección</b></div>
+                <div class="col-md-9">{{usuario.getDireccion()}}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

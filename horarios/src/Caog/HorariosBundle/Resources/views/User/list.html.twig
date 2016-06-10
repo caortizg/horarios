@@ -1,0 +1,27 @@
+{% set idList = 'listUsers' %}
+{% set titleBody = 'Usuarios' %}
+{% extends 'CaogHorariosBundle::/general/listBase.html.twig' %}
+{% block theadList %}
+    <th>Name</th>
+    <th>Apellidos</th>
+    <th>Edad</th>
+    <th>Pais</th>
+    <th>Departamento</th>
+    <th>Ciudad</th>
+    <th>Localidad</th>
+    <th>Direccion</th>
+{% endblock %}
+{% block tbodyList %}
+    {% for usuario in usuarios  %}
+        <tr>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellidos}}</td>
+            <td>{{usuario.edad}}</td>
+            <td>{{usuario.pais}}</td>
+            <td>{{usuario.Departamento}}</td>
+            <td>{{usuario.Ciudad}}</td>
+            <td>{{usuario.Localidad}}</td>
+            <td>{{usuario.Direccion}}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

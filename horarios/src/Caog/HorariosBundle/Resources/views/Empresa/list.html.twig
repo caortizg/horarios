@@ -1,0 +1,23 @@
+{% set idList = 'listCompanies' %}
+{% set titleBody = 'Empresas' %}
+{% extends 'CaogHorariosBundle::/general/listBase.html.twig' %}
+{% block theadList %}
+    <th>Name</th>
+    <th>Pais</th>
+    <th>Departamento</th>
+    <th>Ciudad</th>
+    <th>Localidad</th>
+    <th>Direccion</th>
+{% endblock %}
+{% block tbodyList %}
+    {% for empresa in empresas  %}
+        <tr>
+            <td>{{empresa.nombre}}</td>
+            <td>{{empresa.pais}}</td>
+            <td>{{empresa.Departamento}}</td>
+            <td>{{empresa.Ciudad}}</td>
+            <td>{{empresa.Localidad}}</td>
+            <td>{{empresa.Direccion}}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

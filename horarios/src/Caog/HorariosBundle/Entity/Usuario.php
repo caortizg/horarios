@@ -34,6 +34,36 @@ class Usuario
      * @ORM\Column(type="integer", length=3)
      */
     protected $edad;
+ 
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $pais;
+ 
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $departamento;
+ 
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $ciudad;
+ 
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $localidad;
+ 
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $direccion;
 
     /**
      * Get id
@@ -114,5 +144,125 @@ class Usuario
     public function getEdad()
     {
         return $this->edad;
+    }
+
+    /**
+     * Set pais
+     *
+     * @param string $pais
+     *
+     * @return Usuario
+     */
+    public function setPais($pais)
+    {
+        $this->pais = $pais;
+
+        return $this;
+    }
+
+    /**
+     * Get pais
+     *
+     * @return string
+     */
+    public function getPais()
+    {
+        return $this->pais;
+    }
+
+    /**
+     * Set departamento
+     *
+     * @param string $departamento
+     *
+     * @return Usuario
+     */
+    public function setDepartamento($departamento)
+    {
+        $this->departamento = $departamento;
+
+        return $this;
+    }
+
+    /**
+     * Get departamento
+     *
+     * @return string
+     */
+    public function getDepartamento()
+    {
+        return $this->departamento;
+    }
+
+    /**
+     * Set ciudad
+     *
+     * @param string $ciudad
+     *
+     * @return Usuario
+     */
+    public function setCiudad($ciudad)
+    {
+        $this->ciudad = $ciudad;
+
+        return $this;
+    }
+
+    /**
+     * Get ciudad
+     *
+     * @return string
+     */
+    public function getCiudad()
+    {
+        return $this->ciudad;
+    }
+
+    /**
+     * Set localidad
+     *
+     * @param string $localidad
+     *
+     * @return Usuario
+     */
+    public function setLocalidad($localidad)
+    {
+        $this->localidad = $localidad;
+
+        return $this;
+    }
+
+    /**
+     * Get localidad
+     *
+     * @return string
+     */
+    public function getLocalidad()
+    {
+        return $this->localidad;
+    }
+
+    /**
+     * Set direccion
+     *
+     * @param string $direccion
+     *
+     * @return Usuario
+     */
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    /**
+     * Get direccion
+     *
+     * @return string
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
     }
 }

@@ -19,6 +19,15 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
  * @author Carlos
  */
 class UsuarioController extends Controller{
+    public function listAction(){
+        $usuario = $this->getDoctrine()
+                ->getRepository('CaogHorariosBundle:Usuario')
+                ->findAll();
+        return $this->render(
+                'CaogHorariosBundle:User:list.html.twig',
+                array('usuarios'=>$usuario)
+                );
+    }
     public function registrarAction(Request $request){
         $usuario = new Usuario();
         
@@ -26,20 +35,32 @@ class UsuarioController extends Controller{
             ->add('nombre', TextType::class)
             ->add('apellidos', TextType::class)
             ->add('edad', NumberType::class)
+            ->add('pais', TextType::class)
+            ->add('departamento', TextType::class)
+            ->add('ciudad', TextType::class)
+            ->add('localidad', TextType::class)
+            ->add('direccion', TextType::class)
             ->add('save', SubmitType::class, array('label' => 'Crear usuario'))
             ->getForm();
         
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // ... perform some action, such as saving the task to the database
-
-            echo 1;
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($usuario);
+            $em->flush();
+            return $this->render(
+                    'CaogHorariosBundle:User:registered.html.twig',
+                    array('usuario'=>$usuario)
+                );
+        }else
+        if ($form->isSubmitted()){
+            $parametros['alertPR']= array('type'=>'danger','message'=>'Hay datos incorrectos');
         }
+        $parametros['form']= $form->createView();
         return $this->render(
                     'CaogHorariosBundle:User:register.html.twig',
-                    array(
-                        'form' => $form->createView(),
-                    )
+                    $parametros
                 );
+        
     }
 }
