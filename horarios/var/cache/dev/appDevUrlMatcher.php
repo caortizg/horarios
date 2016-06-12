@@ -120,6 +120,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::listAction',  '_route' => 'caog_horarios_user_list',);
             }
 
+            // caog_horarios_usuario_actividad_register
+            if ($pathinfo === '/user/actividad/register') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::registrarAction',  '_route' => 'caog_horarios_usuario_actividad_register',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/empresa')) {
@@ -131,6 +136,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // caog_horarios_empresa_list
             if ($pathinfo === '/empresa/list') {
                 return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\EmpresaController::listAction',  '_route' => 'caog_horarios_empresa_list',);
+            }
+
+            // caog_horarios_empresa_actividad_register
+            if ($pathinfo === '/empresa/actividad/register') {
+                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::registrarAction',  '_route' => 'caog_horarios_empresa_actividad_register',);
             }
 
         }

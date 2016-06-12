@@ -1,15 +1,26 @@
 caog_horarios_homepage:
     path:     /
     defaults: { _controller: CaogHorariosBundle:Default:index }
+# usuario
 caog_horarios_user_register:
     path: /user/register
     defaults: { _controller: CaogHorariosBundle:Usuario:registrar}
 caog_horarios_user_list:
     path: /user/list
     defaults: { _controller: CaogHorariosBundle:Usuario:list}
+# Usuario->Activida:
+caog_horarios_usuario_actividad_register:
+    path: /user/actividad/register
+    defaults: { _controller: CaogHorariosBundle:ActividadUsuario:registrar}
+    
+# Empresa
 caog_horarios_empresa_register:
     path: /empresa/register
     defaults: { _controller: CaogHorariosBundle:Empresa:registrar}
 caog_horarios_empresa_list:
     path: /empresa/list
     defaults: { _controller: CaogHorariosBundle:Empresa:list}
+# Empresa->Activida
+caog_horarios_empresa_actividad_register:
+    path: /empresa/actividad/register
+    defaults: { _controller: CaogHorariosBundle:ActividadEmpresa:registrar}

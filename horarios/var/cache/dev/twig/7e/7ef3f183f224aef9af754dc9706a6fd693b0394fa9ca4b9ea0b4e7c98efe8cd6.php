@@ -15,8 +15,8 @@ class __TwigTemplate_c15d4dcbbe8538ed712f538497f5c47b16108667d83a9223aec1b2e7baf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_718882e5f4c2dad865456d0f216037512a56ed360e4b53282b0d3fe1997c7d74 = $this->env->getExtension("native_profiler");
-        $__internal_718882e5f4c2dad865456d0f216037512a56ed360e4b53282b0d3fe1997c7d74->enter($__internal_718882e5f4c2dad865456d0f216037512a56ed360e4b53282b0d3fe1997c7d74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle::/general/header.html.twig"));
+        $__internal_410f449c6c09e579926b885185677d2e910961edebf2263a1bc217e5a3b8b30f = $this->env->getExtension("native_profiler");
+        $__internal_410f449c6c09e579926b885185677d2e910961edebf2263a1bc217e5a3b8b30f->enter($__internal_410f449c6c09e579926b885185677d2e910961edebf2263a1bc217e5a3b8b30f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle::/general/header.html.twig"));
 
         // line 1
         echo "<header>
@@ -55,7 +55,10 @@ class __TwigTemplate_c15d4dcbbe8538ed712f538497f5c47b16108667d83a9223aec1b2e7baf
                         <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Usuario <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
-                                <li><a href=\"#\">Listado</a></li>
+                                <li><a href=\"";
+        // line 25
+        echo $this->env->getExtension('routing')->getPath("caog_horarios_user_list");
+        echo "\">Listado</a></li>
                                 <li><a href=\"";
         // line 26
         echo $this->env->getExtension('routing')->getPath("caog_horarios_user_register");
@@ -71,7 +74,7 @@ class __TwigTemplate_c15d4dcbbe8538ed712f538497f5c47b16108667d83a9223aec1b2e7baf
     </nav>
 </header>";
         
-        $__internal_718882e5f4c2dad865456d0f216037512a56ed360e4b53282b0d3fe1997c7d74->leave($__internal_718882e5f4c2dad865456d0f216037512a56ed360e4b53282b0d3fe1997c7d74_prof);
+        $__internal_410f449c6c09e579926b885185677d2e910961edebf2263a1bc217e5a3b8b30f->leave($__internal_410f449c6c09e579926b885185677d2e910961edebf2263a1bc217e5a3b8b30f_prof);
 
     }
 
@@ -87,7 +90,7 @@ class __TwigTemplate_c15d4dcbbe8538ed712f538497f5c47b16108667d83a9223aec1b2e7baf
 
     public function getDebugInfo()
     {
-        return array (  61 => 26,  49 => 17,  45 => 16,  38 => 12,  29 => 6,  22 => 1,);
+        return array (  64 => 26,  60 => 25,  49 => 17,  45 => 16,  38 => 12,  29 => 6,  22 => 1,);
     }
 }
 /* <header>*/
@@ -114,7 +117,7 @@ class __TwigTemplate_c15d4dcbbe8538ed712f538497f5c47b16108667d83a9223aec1b2e7baf
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
-/*                                 <li><a href="#">Listado</a></li>*/
+/*                                 <li><a href="{{path('caog_horarios_user_list')}}">Listado</a></li>*/
 /*                                 <li><a href="{{path('caog_horarios_user_register')}}">Registrar</a></li>*/
 /*                                 <li><a href="#">Vincular informacion</a></li>*/
 /*                                 <li><a href="#">Crear horario por usuario</a></li>*/
