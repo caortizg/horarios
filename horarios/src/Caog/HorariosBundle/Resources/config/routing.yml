@@ -20,7 +20,7 @@ caog_horarios_empresa_register:
 caog_horarios_empresa_list:
     path: /empresa/list
     defaults: { _controller: CaogHorariosBundle:Empresa:list}
-# Empresa->Activida
+# Empresa->Actividaa
 caog_horarios_empresa_actividad_register:
     path: /empresa/actividad/register
     defaults: { _controller: CaogHorariosBundle:ActividadEmpresa:registrar}
