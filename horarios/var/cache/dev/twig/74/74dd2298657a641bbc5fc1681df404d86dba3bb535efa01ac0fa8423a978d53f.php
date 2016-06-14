@@ -21,25 +21,25 @@ class __TwigTemplate_ea381b392757cbf349e0e7051ed73bfaf6ee04f46ee612b7d1f7736659a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f56c4b5e0aa492426bf36ac4e82a681aba46c369c65a9f50ff7184634c415bc = $this->env->getExtension("native_profiler");
-        $__internal_2f56c4b5e0aa492426bf36ac4e82a681aba46c369c65a9f50ff7184634c415bc->enter($__internal_2f56c4b5e0aa492426bf36ac4e82a681aba46c369c65a9f50ff7184634c415bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:Empresa:Actividad/register.html.twig"));
+        $__internal_4f56ca0da05ad43e9cf17e502a1f57aec4f9cefde178a44b8b7d15aac329eb55 = $this->env->getExtension("native_profiler");
+        $__internal_4f56ca0da05ad43e9cf17e502a1f57aec4f9cefde178a44b8b7d15aac329eb55->enter($__internal_4f56ca0da05ad43e9cf17e502a1f57aec4f9cefde178a44b8b7d15aac329eb55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:Empresa:Actividad/register.html.twig"));
 
         // line 2
         if ( !array_key_exists("titleBody", $context)) {
-            $context["titleBody"] = "Registrar Actividad - Empresa";
+            $context["titleBody"] = "Registrar Actividada - Empresa";
         }
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2f56c4b5e0aa492426bf36ac4e82a681aba46c369c65a9f50ff7184634c415bc->leave($__internal_2f56c4b5e0aa492426bf36ac4e82a681aba46c369c65a9f50ff7184634c415bc_prof);
+        $__internal_4f56ca0da05ad43e9cf17e502a1f57aec4f9cefde178a44b8b7d15aac329eb55->leave($__internal_4f56ca0da05ad43e9cf17e502a1f57aec4f9cefde178a44b8b7d15aac329eb55_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_862e48a49d3aa5147f84acbba6f7f9cff2efa3de0d42a61842dc38760867e3eb = $this->env->getExtension("native_profiler");
-        $__internal_862e48a49d3aa5147f84acbba6f7f9cff2efa3de0d42a61842dc38760867e3eb->enter($__internal_862e48a49d3aa5147f84acbba6f7f9cff2efa3de0d42a61842dc38760867e3eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6cfe65ef948a9febf38aac2e8d0ab67a914f641ed9b61cb2be04e8b85f57defa = $this->env->getExtension("native_profiler");
+        $__internal_6cfe65ef948a9febf38aac2e8d0ab67a914f641ed9b61cb2be04e8b85f57defa->enter($__internal_6cfe65ef948a9febf38aac2e8d0ab67a914f641ed9b61cb2be04e8b85f57defa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -209,7 +209,7 @@ class __TwigTemplate_ea381b392757cbf349e0e7051ed73bfaf6ee04f46ee612b7d1f7736659a
 
 ";
         
-        $__internal_862e48a49d3aa5147f84acbba6f7f9cff2efa3de0d42a61842dc38760867e3eb->leave($__internal_862e48a49d3aa5147f84acbba6f7f9cff2efa3de0d42a61842dc38760867e3eb_prof);
+        $__internal_6cfe65ef948a9febf38aac2e8d0ab67a914f641ed9b61cb2be04e8b85f57defa->leave($__internal_6cfe65ef948a9febf38aac2e8d0ab67a914f641ed9b61cb2be04e8b85f57defa_prof);
 
     }
 
@@ -229,7 +229,7 @@ class __TwigTemplate_ea381b392757cbf349e0e7051ed73bfaf6ee04f46ee612b7d1f7736659a
     }
 }
 /* {% extends 'CaogHorariosBundle::layout.html.twig' %}*/
-/* {% if titleBody is not defined %}{% set titleBody = 'Registrar Actividad - Empresa' %}{% endif %}*/
+/* {% if titleBody is not defined %}{% set titleBody = 'Registrar Actividada - Empresa' %}{% endif %}*/
 /* {% block body %}*/
 /*     {{ form_start(form) }}*/
 /*     {{ form_errors(form) }}*/

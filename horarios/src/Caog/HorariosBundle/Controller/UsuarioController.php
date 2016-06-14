@@ -8,11 +8,10 @@
 
 namespace Caog\HorariosBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Caog\HorariosBundle\Entity\Usuario;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Caog\HorariosBundle\Entity\Usuario;
+use Caog\HorariosBundle\Form\Usuario\UsuarioType;
+
 /**
  * Description of UserController
  *
@@ -30,18 +29,7 @@ class UsuarioController extends Controller{
     }
     public function registrarAction(Request $request){
         $usuario = new Usuario();
-        
-        $form = $this->createFormBuilder($usuario)
-            ->add('nombre', TextType::class)
-            ->add('apellidos', TextType::class)
-            ->add('edad', NumberType::class)
-            ->add('pais', TextType::class)
-            ->add('departamento', TextType::class)
-            ->add('ciudad', TextType::class)
-            ->add('localidad', TextType::class)
-            ->add('direccion', TextType::class)
-            ->add('save', SubmitType::class, array('label' => 'Crear usuario'))
-            ->getForm();
+        $form = $this->createForm(UsuarioType::class, $usuario);
         
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

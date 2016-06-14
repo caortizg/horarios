@@ -22,8 +22,8 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c4a7b9872f5fda51dcea83c86168a7467c0ed791da5c62fd4bf3d723f2f4daa4 = $this->env->getExtension("native_profiler");
-        $__internal_c4a7b9872f5fda51dcea83c86168a7467c0ed791da5c62fd4bf3d723f2f4daa4->enter($__internal_c4a7b9872f5fda51dcea83c86168a7467c0ed791da5c62fd4bf3d723f2f4daa4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:Empresa:list.html.twig"));
+        $__internal_02bf9f8e26e40d5e78bfe381138ef483c0962a0f502e1f3cfc8737f6cf6584c7 = $this->env->getExtension("native_profiler");
+        $__internal_02bf9f8e26e40d5e78bfe381138ef483c0962a0f502e1f3cfc8737f6cf6584c7->enter($__internal_02bf9f8e26e40d5e78bfe381138ef483c0962a0f502e1f3cfc8737f6cf6584c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:Empresa:list.html.twig"));
 
         // line 1
         $context["idList"] = "listCompanies";
@@ -32,15 +32,15 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
         // line 3
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c4a7b9872f5fda51dcea83c86168a7467c0ed791da5c62fd4bf3d723f2f4daa4->leave($__internal_c4a7b9872f5fda51dcea83c86168a7467c0ed791da5c62fd4bf3d723f2f4daa4_prof);
+        $__internal_02bf9f8e26e40d5e78bfe381138ef483c0962a0f502e1f3cfc8737f6cf6584c7->leave($__internal_02bf9f8e26e40d5e78bfe381138ef483c0962a0f502e1f3cfc8737f6cf6584c7_prof);
 
     }
 
     // line 4
     public function block_theadList($context, array $blocks = array())
     {
-        $__internal_f25e3c7a4f8318b6fde3dcbea99f838b23720ab2be35ee915b9e7146b617c7fb = $this->env->getExtension("native_profiler");
-        $__internal_f25e3c7a4f8318b6fde3dcbea99f838b23720ab2be35ee915b9e7146b617c7fb->enter($__internal_f25e3c7a4f8318b6fde3dcbea99f838b23720ab2be35ee915b9e7146b617c7fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
+        $__internal_bb5b8501e17bd6f6ea80f0de21889c0eb18a5fb7f53768fdca72d6d3c71e798c = $this->env->getExtension("native_profiler");
+        $__internal_bb5b8501e17bd6f6ea80f0de21889c0eb18a5fb7f53768fdca72d6d3c71e798c->enter($__internal_bb5b8501e17bd6f6ea80f0de21889c0eb18a5fb7f53768fdca72d6d3c71e798c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
 
         // line 5
         echo "    <th>Name</th>
@@ -49,49 +49,60 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
     <th>Ciudad</th>
     <th>Localidad</th>
     <th>Direccion</th>
+    <th>Opciones</th>
 ";
         
-        $__internal_f25e3c7a4f8318b6fde3dcbea99f838b23720ab2be35ee915b9e7146b617c7fb->leave($__internal_f25e3c7a4f8318b6fde3dcbea99f838b23720ab2be35ee915b9e7146b617c7fb_prof);
+        $__internal_bb5b8501e17bd6f6ea80f0de21889c0eb18a5fb7f53768fdca72d6d3c71e798c->leave($__internal_bb5b8501e17bd6f6ea80f0de21889c0eb18a5fb7f53768fdca72d6d3c71e798c_prof);
 
     }
 
-    // line 12
+    // line 13
     public function block_tbodyList($context, array $blocks = array())
     {
-        $__internal_3b73257cc1dfd0e351768736980b4a2d4abf7e8cb0b078373ab3dfe2402749a3 = $this->env->getExtension("native_profiler");
-        $__internal_3b73257cc1dfd0e351768736980b4a2d4abf7e8cb0b078373ab3dfe2402749a3->enter($__internal_3b73257cc1dfd0e351768736980b4a2d4abf7e8cb0b078373ab3dfe2402749a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
+        $__internal_6fcf2d2ceed48a8ec4cfe88b134503b6815ef1c54f018f39f1cdf1554ec2bdd6 = $this->env->getExtension("native_profiler");
+        $__internal_6fcf2d2ceed48a8ec4cfe88b134503b6815ef1c54f018f39f1cdf1554ec2bdd6->enter($__internal_6fcf2d2ceed48a8ec4cfe88b134503b6815ef1c54f018f39f1cdf1554ec2bdd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
 
-        // line 13
+        // line 14
         echo "    ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["empresas"]) ? $context["empresas"] : $this->getContext($context, "empresas")));
         foreach ($context['_seq'] as $context["_key"] => $context["empresa"]) {
-            // line 14
+            // line 15
             echo "        <tr>
             <td>";
-            // line 15
+            // line 16
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "nombre", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 16
+            // line 17
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "pais", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 17
+            // line 18
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "Departamento", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 18
+            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "Ciudad", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 19
+            // line 20
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "Localidad", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 20
+            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "Direccion", array()), "html", null, true);
             echo "</td>
+            <td>
+                <a class=\"btn btn-success\" href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("caog_horarios_empresa_actividad_register", array("idEmpresa" => $this->getAttribute($context["empresa"], "getId", array()))), "html", null, true);
+            echo "\"><i class=\"glyphicon glyphicon-plus\"></i> Actividad</a>
+                <a class=\"btn btn-info\" href=\"";
+            // line 24
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("caog_horarios_empresa_actividad_list", array("idEmpresa" => $this->getAttribute($context["empresa"], "getId", array()))), "html", null, true);
+            echo "\"><i class=\"glyphicon glyphicon-search\"></i> Actividades</a>
+            </td>
         </tr>
     ";
         }
@@ -99,7 +110,7 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['empresa'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_3b73257cc1dfd0e351768736980b4a2d4abf7e8cb0b078373ab3dfe2402749a3->leave($__internal_3b73257cc1dfd0e351768736980b4a2d4abf7e8cb0b078373ab3dfe2402749a3_prof);
+        $__internal_6fcf2d2ceed48a8ec4cfe88b134503b6815ef1c54f018f39f1cdf1554ec2bdd6->leave($__internal_6fcf2d2ceed48a8ec4cfe88b134503b6815ef1c54f018f39f1cdf1554ec2bdd6_prof);
 
     }
 
@@ -115,7 +126,7 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
 
     public function getDebugInfo()
     {
-        return array (  93 => 20,  89 => 19,  85 => 18,  81 => 17,  77 => 16,  73 => 15,  70 => 14,  65 => 13,  59 => 12,  46 => 5,  40 => 4,  33 => 3,  31 => 2,  29 => 1,  11 => 3,);
+        return array (  103 => 24,  99 => 23,  94 => 21,  90 => 20,  86 => 19,  82 => 18,  78 => 17,  74 => 16,  71 => 15,  66 => 14,  60 => 13,  46 => 5,  40 => 4,  33 => 3,  31 => 2,  29 => 1,  11 => 3,);
     }
 }
 /* {% set idList = 'listCompanies' %}*/
@@ -128,6 +139,7 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
 /*     <th>Ciudad</th>*/
 /*     <th>Localidad</th>*/
 /*     <th>Direccion</th>*/
+/*     <th>Opciones</th>*/
 /* {% endblock %}*/
 /* {% block tbodyList %}*/
 /*     {% for empresa in empresas  %}*/
@@ -138,6 +150,10 @@ class __TwigTemplate_ef56a4d1423331cb267e2054ed198617fb022f6b0ef85bcd6a5b8175827
 /*             <td>{{empresa.Ciudad}}</td>*/
 /*             <td>{{empresa.Localidad}}</td>*/
 /*             <td>{{empresa.Direccion}}</td>*/
+/*             <td>*/
+/*                 <a class="btn btn-success" href="{{path('caog_horarios_empresa_actividad_register', {'idEmpresa': empresa.getId})}}"><i class="glyphicon glyphicon-plus"></i> Actividad</a>*/
+/*                 <a class="btn btn-info" href="{{path('caog_horarios_empresa_actividad_list', {'idEmpresa': empresa.getId})}}"><i class="glyphicon glyphicon-search"></i> Actividades</a>*/
+/*             </td>*/
 /*         </tr>*/
 /*     {% endfor %}*/
 /* {% endblock %}*/

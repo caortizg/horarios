@@ -138,9 +138,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\EmpresaController::listAction',  '_route' => 'caog_horarios_empresa_list',);
             }
 
-            // caog_horarios_empresa_actividad_register
-            if ($pathinfo === '/empresa/actividad/register') {
-                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::registrarAction',  '_route' => 'caog_horarios_empresa_actividad_register',);
+            if (0 === strpos($pathinfo, '/empresa/actividad')) {
+                // caog_horarios_empresa_actividad_register
+                if (0 === strpos($pathinfo, '/empresa/actividad/register') && preg_match('#^/empresa/actividad/register/(?P<idEmpresa>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_empresa_actividad_register')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::registrarAction',));
+                }
+
+                // caog_horarios_empresa_actividad_list
+                if (0 === strpos($pathinfo, '/empresa/actividad/list') && preg_match('#^/empresa/actividad/list(?:/(?P<idEmpresa>[^/]++))?$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_empresa_actividad_list')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::listAction',  'idEmpresa' => 0,));
+                }
+
             }
 
         }

@@ -1,0 +1,50 @@
+{% set titleBody = 'Resumen del registro' %}
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% block body %}
+    <div class="panel panel-success">
+        <div class="panel-heading">Datos de la actividad</div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Nombre</b></div>
+                <div class="col-md-9">{{actividad.getNombre()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Empresa</b></div>
+                <div class="col-md-9">{{empresa.getNombre()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>tipo</b></div>
+                <div class="col-md-9">{{actividad.getTipo()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Prioridad</b></div>
+                <div class="col-md-9">{{actividad.getPrioridad()}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">Datos de localizacion</div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Pais</b></div>
+                <div class="col-md-9">{{actividad.getPais()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Departamento</b></div>
+                <div class="col-md-9">{{actividad.getDepartamento()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Ciudad</b></div>
+                <div class="col-md-9">{{actividad.getCiudad()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Localidad</b></div>
+                <div class="col-md-9">{{actividad.getLocalidad()}}</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-3"><b>Dirección</b></div>
+                <div class="col-md-9">{{actividad.getDireccion()}}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

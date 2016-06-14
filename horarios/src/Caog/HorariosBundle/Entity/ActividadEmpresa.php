@@ -63,7 +63,13 @@ class ActividadEmpresa {
      * @ORM\Column(type="string", length=100)
      */
     protected $direccion;
-
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Empresa", inversedBy="actividadesEmpresa")
+     * @ORM\JoinColumn(name="empresa_id", referencedColumnName="id")
+     */
+    protected $empresa;
+    
     /**
      * Get id
      *
@@ -264,5 +270,53 @@ class ActividadEmpresa {
     public function getDireccion()
     {
         return $this->direccion;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \Caog\HorariosBundle\Entity\Empresa $category
+     *
+     * @return ActividadEmpresa
+     */
+    public function setCategory(\Caog\HorariosBundle\Entity\Empresa $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Caog\HorariosBundle\Entity\Empresa
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Set empresa
+     *
+     * @param \Caog\HorariosBundle\Entity\Empresa $empresa
+     *
+     * @return ActividadEmpresa
+     */
+    public function setEmpresa(\Caog\HorariosBundle\Entity\Empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \Caog\HorariosBundle\Entity\Empresa
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
     }
 }

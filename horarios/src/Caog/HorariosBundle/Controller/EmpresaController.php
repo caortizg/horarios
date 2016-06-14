@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Caog\HorariosBundle\Form\Empresa\EmpresaType;
 /**
  * Description of UserController
  *
@@ -31,16 +32,7 @@ class EmpresaController extends Controller{
     public function registrarAction(Request $request){
         $parametros = array();
         $empresa = new Empresa();
-        
-        $form = $this->createFormBuilder($empresa)
-            ->add('nombre', TextType::class)
-            ->add('pais', TextType::class)
-            ->add('departamento', TextType::class)
-            ->add('ciudad', TextType::class)
-            ->add('localidad', TextType::class)
-            ->add('direccion', TextType::class)
-            ->add('save', SubmitType::class, array('label' => 'Crear empresa'))
-            ->getForm();
+        $form = $this->createForm(EmpresaType::class, $empresa);
         
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

@@ -8,6 +8,7 @@
     <th>Ciudad</th>
     <th>Localidad</th>
     <th>Direccion</th>
+    <th>Opciones</th>
 {% endblock %}
 {% block tbodyList %}
     {% for empresa in empresas  %}
@@ -18,6 +19,10 @@
             <td>{{empresa.Ciudad}}</td>
             <td>{{empresa.Localidad}}</td>
             <td>{{empresa.Direccion}}</td>
+            <td>
+                <a class="btn btn-success" href="{{path('caog_horarios_empresa_actividad_register', {'idEmpresa': empresa.getId})}}"><i class="glyphicon glyphicon-plus"></i> Actividad</a>
+                <a class="btn btn-info" href="{{path('caog_horarios_empresa_actividad_list', {'idEmpresa': empresa.getId})}}"><i class="glyphicon glyphicon-search"></i> Actividades</a>
+            </td>
         </tr>
     {% endfor %}
 {% endblock %}

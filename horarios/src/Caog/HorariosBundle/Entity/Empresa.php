@@ -3,6 +3,7 @@ namespace Caog\HorariosBundle\Entity;
  
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity
  * @ORM\Table(name="empresa")
@@ -50,6 +51,16 @@ class Empresa {
      * @ORM\Column(type="string", length=100)
      */
     protected $direccion;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="ActividadEmpresa", mappedBy="empresa")
+     */
+    protected $actividadesEmpresa;
+    
+    public function __construct()
+    {
+        $this->Actividades = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -203,5 +214,39 @@ class Empresa {
     public function getDireccion()
     {
         return $this->direccion;
+    }
+
+    /**
+     * Add actividadesEmpresa
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa
+     *
+     * @return Empresa
+     */
+    public function addActividadesEmpresa(\Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa)
+    {
+        $this->actividadesEmpresa[] = $actividadesEmpresa;
+
+        return $this;
+    }
+
+    /**
+     * Remove actividadesEmpresa
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa
+     */
+    public function removeActividadesEmpresa(\Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa)
+    {
+        $this->actividadesEmpresa->removeElement($actividadesEmpresa);
+    }
+
+    /**
+     * Get actividadesEmpresa
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getActividadesEmpresa()
+    {
+        return $this->actividadesEmpresa;
     }
 }
