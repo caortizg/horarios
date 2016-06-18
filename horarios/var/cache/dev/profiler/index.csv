@@ -14,3 +14,10 @@ c5deb3,::1,POST,http://localhost/horarios/horarios/web/app_dev.php/empresa/activ
 52fbe2,::1,POST,http://localhost/horarios/horarios/web/app_dev.php/empresa/actividad/register/1,1466053400,,200
 e2b4c7,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/list,1466053404,,200
 a44f57,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/actividad/list/1,1466053407,,200
+7d99b5,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/,1466137389,,200
+8053e0,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/register,1466137400,,200
+f7110d,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/list,1466137404,,200
+5ae286,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/actividad/register/1,1466137409,,200
+5e2ae2,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/register,1466137418,,200
+72ff06,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/,1466279871,,200
+351702,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/empresa/list,1466279876,,200

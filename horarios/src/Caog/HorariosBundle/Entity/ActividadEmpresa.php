@@ -1,84 +1,93 @@
 <?php
 
 namespace Caog\HorariosBundle\Entity;
- 
+
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+
 /**
+ * ActividadEmpresa
+ *
+ * @ORM\Table(name="actividad_empresa", indexes={@ORM\Index(name="IDX_881640FB521E1991", columns={"empresa_id"})})
  * @ORM\Entity
- * @ORM\Table(name="ActividadEmpresa")
  */
-class ActividadEmpresa {
+class ActividadEmpresa
+{
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    protected $id;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $nombre;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="integer", length=2)
-     */
-    protected $tipo;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="integer", length=10)
-     */
-    protected $prioridad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $pais;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $departamento;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $ciudad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $localidad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $direccion;
-    
-    /**
-     * @ORM\ManyToOne(targetEntity="Empresa", inversedBy="actividadesEmpresa")
-     * @ORM\JoinColumn(name="empresa_id", referencedColumnName="id")
-     */
-    protected $empresa;
-    
-    /**
-     * Get id
+     * @var string
      *
-     * @return integer
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $nombre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prioridad", type="integer", nullable=false)
+     */
+    private $prioridad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pais", type="string", length=100, nullable=false)
+     */
+    private $pais;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departamento", type="string", length=100, nullable=false)
+     */
+    private $departamento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ciudad", type="string", length=100, nullable=false)
+     */
+    private $ciudad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=100, nullable=false)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=100, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Caog\HorariosBundle\Entity\Empresa
+     *
+     * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\Empresa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="empresa_id", referencedColumnName="id")
+     * })
+     */
+    private $empresa;
+
+
 
     /**
      * Set nombre
@@ -273,27 +282,13 @@ class ActividadEmpresa {
     }
 
     /**
-     * Set category
+     * Get id
      *
-     * @param \Caog\HorariosBundle\Entity\Empresa $category
-     *
-     * @return ActividadEmpresa
+     * @return integer
      */
-    public function setCategory(\Caog\HorariosBundle\Entity\Empresa $category = null)
+    public function getId()
     {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \Caog\HorariosBundle\Entity\Empresa
-     */
-    public function getCategory()
-    {
-        return $this->category;
+        return $this->id;
     }
 
     /**

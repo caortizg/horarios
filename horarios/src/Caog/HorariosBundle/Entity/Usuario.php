@@ -1,79 +1,83 @@
 <?php
 
 namespace Caog\HorariosBundle\Entity;
- 
+
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+
 /**
- * @ORM\Entity
+ * Usuario
+ *
  * @ORM\Table(name="usuario")
+ * @ORM\Entity
  */
 class Usuario
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
      */
-    protected $id;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $nombre;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $apellidos;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="integer", length=3)
-     */
-    protected $edad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $pais;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $departamento;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $ciudad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $localidad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $direccion;
+    private $nombre;
 
     /**
-     * Get id
+     * @var string
      *
-     * @return integer
+     * @ORM\Column(name="apellidos", type="string", length=100, nullable=false)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $apellidos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="edad", type="integer", nullable=false)
+     */
+    private $edad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pais", type="string", length=100, nullable=false)
+     */
+    private $pais;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departamento", type="string", length=100, nullable=false)
+     */
+    private $departamento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ciudad", type="string", length=100, nullable=false)
+     */
+    private $ciudad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=100, nullable=false)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=100, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
 
     /**
      * Set nombre
@@ -91,6 +95,7 @@ class Usuario
 
     /**
      * Get nombre
+     *
      * @return string
      */
     public function getNombre()
@@ -264,5 +269,15 @@ class Usuario
     public function getDireccion()
     {
         return $this->direccion;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

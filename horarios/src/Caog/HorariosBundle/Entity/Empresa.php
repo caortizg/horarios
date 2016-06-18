@@ -1,76 +1,69 @@
 <?php
+
 namespace Caog\HorariosBundle\Entity;
- 
+
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use Doctrine\Common\Collections\ArrayCollection;
+
 /**
- * @ORM\Entity
+ * Empresa
+ *
  * @ORM\Table(name="empresa")
+ * @ORM\Entity
  */
-class Empresa {
+class Empresa
+{
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
      */
-    protected $id;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $nombre;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $pais;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $departamento;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $ciudad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $localidad;
- 
-    /**
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $direccion;
-    
-    /**
-     * @ORM\OneToMany(targetEntity="ActividadEmpresa", mappedBy="empresa")
-     */
-    protected $actividadesEmpresa;
-    
-    public function __construct()
-    {
-        $this->Actividades = new ArrayCollection();
-    }
+    private $nombre;
 
     /**
-     * Get id
+     * @var string
      *
-     * @return integer
+     * @ORM\Column(name="pais", type="string", length=100, nullable=false)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $pais;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departamento", type="string", length=100, nullable=false)
+     */
+    private $departamento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ciudad", type="string", length=100, nullable=false)
+     */
+    private $ciudad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=100, nullable=false)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=100, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
 
     /**
      * Set nombre
@@ -217,36 +210,12 @@ class Empresa {
     }
 
     /**
-     * Add actividadesEmpresa
+     * Get id
      *
-     * @param \Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa
-     *
-     * @return Empresa
+     * @return integer
      */
-    public function addActividadesEmpresa(\Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa)
+    public function getId()
     {
-        $this->actividadesEmpresa[] = $actividadesEmpresa;
-
-        return $this;
-    }
-
-    /**
-     * Remove actividadesEmpresa
-     *
-     * @param \Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa
-     */
-    public function removeActividadesEmpresa(\Caog\HorariosBundle\Entity\ActividadEmpresa $actividadesEmpresa)
-    {
-        $this->actividadesEmpresa->removeElement($actividadesEmpresa);
-    }
-
-    /**
-     * Get actividadesEmpresa
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getActividadesEmpresa()
-    {
-        return $this->actividadesEmpresa;
+        return $this->id;
     }
 }
