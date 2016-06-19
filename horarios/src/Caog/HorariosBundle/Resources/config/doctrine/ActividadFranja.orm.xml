@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Caog\HorariosBundle\Entity\ActividadFranja" table="actividad_franja">
+    <indexes>
+      <index name="act_emp_id_idx" columns="act_emp_id"/>
+    </indexes>
+    <id name="actFraId" type="integer" column="act_fra_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="actFraDia" type="integer" column="act_fra_dia" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="actFraDuracion" type="integer" column="act_fra_duracion" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="actHoraInicio" type="datetime" column="act_hora_inicio" nullable="true"/>
+    <field name="usuResponsable" type="integer" column="usu_responsable" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="actFraEstado" type="integer" column="act_fra_estado" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="actEmp" target-entity="ActividadEmpresa" fetch="LAZY">
+      <join-columns>
+        <join-column name="act_emp_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

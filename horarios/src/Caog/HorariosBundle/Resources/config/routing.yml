@@ -27,3 +27,9 @@ caog_horarios_empresa_actividad_register:
 caog_horarios_empresa_actividad_list:
     path: /empresa/actividad/list/{idEmpresa}
     defaults: { _controller: CaogHorariosBundle:ActividadEmpresa:list, idEmpresa: 0}
+    
+caog_horarios_empresa_actividad_vincular:
+    path: /empresa/actividad/vincular/{id}
+    defaults: { _controller: CaogHorariosBundle:ActividadFranja:vincular, id: 0}
+    
+ 

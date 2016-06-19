@@ -3,6 +3,7 @@
 namespace Caog\HorariosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * ActividadEmpresa
@@ -12,6 +13,23 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ActividadEmpresa
 {
+    /**
+    * @ORM\ManyToMany(targetEntity="ActividadFranja", cascade={"persist"})
+    */
+    private $actFranja;
+    
+    public function __construct()
+    {
+        $this->actFranja = new ArrayCollection();
+    }
+    public function getActFranja()
+    {
+        return $this->actFranja;
+    }
+     public function addActFranja(ActividadFranja $actFranja)
+    {
+        $this->actFranja->add($actFranja);
+    }
     /**
      * @var string
      *

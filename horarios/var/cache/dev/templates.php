@@ -82,6 +82,7 @@
   'CaogHorariosBundle:Empresa/Actividad:list.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/Actividad/list.html.twig',
   'CaogHorariosBundle:Empresa/Actividad:register.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/Actividad/register.html.twig',
   'CaogHorariosBundle:Empresa/Actividad:registered.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/Actividad/registered.html.twig',
+  'CaogHorariosBundle:Empresa/Actividad:vincular.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/Actividad/vincular.html.twig',
   'CaogHorariosBundle:Empresa:list.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/list.html.twig',
   'CaogHorariosBundle:Empresa:register.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/register.html.twig',
   'CaogHorariosBundle:Empresa:registered.html.twig' => 'D:\\xampp\\htdocs\\horarios\\horarios\\src\\Caog\\HorariosBundle/Resources/views/Empresa/registered.html.twig',

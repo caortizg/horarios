@@ -15,8 +15,8 @@ class __TwigTemplate_036546325007f8d67a44efc4ccb861dc4fd1b33251ef77ae12bbc5aca9c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_49f46625d43c90990d78b3f21b77134a489d3faf12f44081cf2adbf94c451e87 = $this->env->getExtension("native_profiler");
-        $__internal_49f46625d43c90990d78b3f21b77134a489d3faf12f44081cf2adbf94c451e87->enter($__internal_49f46625d43c90990d78b3f21b77134a489d3faf12f44081cf2adbf94c451e87_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.html.twig"));
+        $__internal_c928b52bf16489e87c68dc8233546214e23eb9935c54f60241ef32e7d096b3b8 = $this->env->getExtension("native_profiler");
+        $__internal_c928b52bf16489e87c68dc8233546214e23eb9935c54f60241ef32e7d096b3b8->enter($__internal_c928b52bf16489e87c68dc8233546214e23eb9935c54f60241ef32e7d096b3b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.html.twig"));
 
         // line 1
         echo "<!-- START of Symfony Web Debug Toolbar -->
@@ -125,7 +125,7 @@ $context["name"], "profiler_markup_version" =>             // line 34
 <!-- END of Symfony Web Debug Toolbar -->
 ";
         
-        $__internal_49f46625d43c90990d78b3f21b77134a489d3faf12f44081cf2adbf94c451e87->leave($__internal_49f46625d43c90990d78b3f21b77134a489d3faf12f44081cf2adbf94c451e87_prof);
+        $__internal_c928b52bf16489e87c68dc8233546214e23eb9935c54f60241ef32e7d096b3b8->leave($__internal_c928b52bf16489e87c68dc8233546214e23eb9935c54f60241ef32e7d096b3b8_prof);
 
     }
 

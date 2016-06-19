@@ -1,6 +1,14 @@
 {% set idList = 'listCompanies' %}
 {% set titleBody = 'Empresas' %}
 {% extends 'CaogHorariosBundle::/general/listBase.html.twig' %}
+<div class="row"> </div>
+                {% for flashMessage in app.session.flashbag.get('mensaje') %}
+                    <div class="alert alert-success">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{flashMessage}}
+                    </div>
+                {% endfor%}
+<div class="row"> &nbsp; </div>
 {% block theadList %}
     <th>Nombre</th>
     <th>Tipo</th>
@@ -26,7 +34,7 @@
             <td>{{actividad.Localidad}}</td>
             <td>{{actividad.Direccion}}</td>
             <td>
-                <a class="btn btn-success" href="#"><i class="glyphicon glyphicon-plus"></i> Informacion</a>
+                <a class="btn btn-success" href="{{path('caog_horarios_empresa_actividad_vincular', {'id': actividad.id})}}"><i class="glyphicon glyphicon-plus"></i> Informacion</a>
             </td>
         </tr>
     {% endfor %}

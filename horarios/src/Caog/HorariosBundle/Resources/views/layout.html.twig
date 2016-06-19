@@ -8,8 +8,13 @@
         {% block head %}
         {% endblock %}
         {% block stylesheets %}
-            <link href="{{ asset('public/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
             <link href="{{ asset('public/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('public/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('public/css/actividad.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('public/js/jquery-2.2.4.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('public/js/bootstrap.min.js') }}" type="text/javascript"></script>
         {% endblock %}
     </head>
 
@@ -39,9 +44,6 @@
                 {% include 'CaogHorariosBundle::/general/footer.html.twig' %}
             {% endblock %}
         </div>
-        {% block javascripts %}
-            <script src="{{ asset('public/js/jquery-2.2.4.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('public/js/bootstrap.min.js') }}" type="text/javascript"></script>
-        {% endblock %}
+        
     </body>
 </html>

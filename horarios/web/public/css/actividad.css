@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-jun-2016, 19:49:18
+    Author     : Brandon Robles
+*/
+
+
+ul
+{
+    list-style-type: none;
+}
+#actividad_franja_vincular ul{
+    padding-left: 0px
+}
+#actividad_franja_vincular li{
+    padding: 10px;
+    border:1px solid  grey;
+    
+}
+    
