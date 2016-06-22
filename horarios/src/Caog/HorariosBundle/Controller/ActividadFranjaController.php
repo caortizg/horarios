@@ -28,9 +28,7 @@ class ActividadFranjaController extends Controller{
                 ->find($id);
         if (!$actividad_empresa) {
             throw $this->createNotFoundException('No task found for id '.$id);
-        }   
-        
-        dump('hello');
+        }
 //        $form = $this->createForm(ActividadFranjaVincularType::class,$actividad_empresa);
         $form = $this->createForm(ActividadFranjaVincularType::class);
         $form->handleRequest($request);
