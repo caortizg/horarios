@@ -10,6 +10,7 @@
     <th>Ciudad</th>
     <th>Localidad</th>
     <th>Direccion</th>
+    <th>Opciones</th>
 {% endblock %}
 {% block tbodyList %}
     {% for usuario in usuarios  %}
@@ -22,6 +23,12 @@
             <td>{{usuario.Ciudad}}</td>
             <td>{{usuario.Localidad}}</td>
             <td>{{usuario.Direccion}}</td>
+            <td>
+                <a class="btn btn-success" href="#" title="Consultar actividad"><i class="glyphicon glyphicon-plus"></i> <i class="glyphicon glyphicon-blackboard"></i></a>
+                <a class="btn btn-info" href="#" title="Consultar actividades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-blackboard"></i></a>
+                <a class="btn btn-success" href="#" title="Vincular entidad"><i class="glyphicon glyphicon-link"></i> <i class="glyphicon glyphicon-tent"></i></a>
+                <a class="btn btn-info" href="#" title="Consultar entidades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-tent"></i></a>
+            </td>
         </tr>
     {% endfor %}
 {% endblock %}
