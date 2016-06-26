@@ -1,0 +1,76 @@
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% set idList = 'listCompanies' %}
+{% set titleBody = 'Franja horaria' %}
+{% block body %}
+    <div class="row">
+        {% for flashMessage in app.session.flashbag.get('mensaje') %}
+            <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{flashMessage}}
+            </div>
+        {% endfor%}
+    </div>
+        {{ form_start(form,{'attr':{'id':'actividad_franja_vincular'} } ) }}
+        {% set dias = {'1': 'Lunes','2':'Martes','3':'Miercoles','4':'Jueves','5':'Viernes','6':'Sabado','7':'Domingo'} %}
+        
+        {% for i in 0..6 %}
+            {% set aux = 0 %}
+            {% for franja in franjas %}
+                {% if franja.actFraDia == i+1 %}
+                    {% if aux == 0 %}
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{ dias[i+1] }}</div>
+                        <div class="panel-body">
+                    {% endif%}                                    
+                            <div class="col-md-4">
+                                <div class="panel panel-primary" id="franja_{{ loop.index }}">
+                                    <div class="panel-body">
+                                        <button type="button" class="close eliminarFranja" id="{{ loop.index }}"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        <div id="actividad_franja_vincular_actividadfranja_{{ loop.index }}">
+                                            <div class="input-group col-md-12">
+                                                <span class="input-group-addon" id="basic-addon3"><label class="labelForm  required " for="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actFraDia">Dia:</label></span>
+                                                <select id="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actFraDia" name="actividad_franja_vincular[actividadfranja][{{ loop.index }}][actFraDia]" required="required" class="inputForm form-control" data-error="Por favor selecciona una opción.">
+                                                    <option value="" >Seleccione</option>
+                                                    {% for key,dia in dias %}
+                                                        <option value="{{key}}" {% if key == franja.actFraDia %}{{'selected="selected"'}}{% endif %}>{{dia}}</option>     
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                            <div class="input-group col-md-12">
+                                                <span class="input-group-addon" id="basic-addon3"><label class="labelForm required" for="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actFraDuracion">Duración:</label></span>
+                                                <input type="text" id="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actFraDuracion" name="actividad_franja_vincular[actividadfranja][{{ loop.index }}][actFraDuracion]" required="required" class="inputForm form-control" data-error="Por favor completa este campo." maxlength="300" value="{{franja.actFraDuracion}}">
+                                            </div>
+                                            <div class="input-group col-md-12">
+                                                <span class="input-group-addon" id="basic-addon3">
+                                                <label class="labelForm required" for="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actHoraInicio">Hora de inicio:  </label>
+                                                </span>
+                                                <input type="time" id="actividad_franja_vincular_actividadfranja_{{ loop.index }}_actHoraInicio" name="actividad_franja_vincular[actividadfranja][{{ loop.index }}][actHoraInicio]" required="required" class="inputForm form-control" data-error="Por favor completa este campo." maxlength="10" placeholder="AAAA-MM-DD" value="{{franja.actHoraInicio|date('H:i')}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    {% set aux = 1 %}
+                {% endif%}
+            {% endfor%}
+            {% if aux == 1 %}
+                        </div>
+                    </div>
+            {% endif%}
+        {% endfor%}
+    <div class="panel panel-default">
+
+        <ul class="actividadfranja" data-prototype="{{ form_widget(form.actividadfranja.vars.prototype)|e}}">
+            
+        </ul>  
+        {{ form_errors(form) }}
+        {{ form_end(form)}}
+    </div>
+
+
+{%endblock%}
+{% block javascripts %}
+    {{parent()}}    
+    <script src="{{ asset('public/js/funciones.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('public/js/horarios/empresa/actividadVincular.js') }}" type="text/javascript"></script>
+{% endblock %}

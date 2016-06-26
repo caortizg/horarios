@@ -76,6 +76,16 @@ class ActividadUsuario
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+    
+    /**
+     * @var \Caog\HorariosBundle\Entity\Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * })
+     */
+    private $usuario;
 
 
 
@@ -279,5 +289,28 @@ class ActividadUsuario
     public function getId()
     {
         return $this->id;
+    }
+    /**
+     * Set usuario
+     *
+     * @param \Caog\HorariosBundle\Entity\Usuario $usuario
+     *
+     * @return Usuario
+     */
+    public function setUsuario(\Caog\HorariosBundle\Entity\Usuario $usuario = null)
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return \Caog\HorariosBundle\Entity\Usuario
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
     }
 }

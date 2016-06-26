@@ -65,6 +65,16 @@ class ActividadFranja
      * })
      */
     private $actEmp;
+    
+    /**
+     * @var \Caog\HorariosBundle\Entity\ActividadUsuario
+     *
+     * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\ActividadUsuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="act_usu_id", referencedColumnName="id")
+     * })
+     */
+    private $actUsu;
 
 
 
@@ -220,5 +230,28 @@ class ActividadFranja
     public function getActEmp()
     {
         return $this->actEmp;
+    }
+    /**
+     * Set actUsu
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadUsuario $actUsu
+     *
+     * @return ActividadUsuario
+     */
+    public function setActUsu(\Caog\HorariosBundle\Entity\ActividadUsuario $actUsu = null)
+    {
+        $this->actUsu = $actUsu;
+
+        return $this;
+    }
+
+    /**
+     * Get actEmp
+     *
+     * @return \Caog\HorariosBundle\Entity\ActividadUsuario
+     */
+    public function getActUsu()
+    {
+        return $this->actUsu;
     }
 }

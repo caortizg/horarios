@@ -1,0 +1,86 @@
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% if titleBody is not defined %}{% set titleBody = 'Registrar Actividad - Usuario' %}{% endif %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Datos de la actividad</div>
+        <div class="panel-body">
+            <div class="row">
+                {{ form_errors(form.nombre) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.nombre) }}</span>
+                        {{ form_widget(form.nombre, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
+                {{ form_errors(form.tipo) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.tipo) }}</span>
+                        {{ form_widget(form.tipo, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
+                {{ form_errors(form.prioridad) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.prioridad) }}</span>
+                        {{ form_widget(form.prioridad, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Datos de localizacion</div>
+        <div class="panel-body">
+            <div class="row">
+                {{ form_errors(form.pais) }}
+                <div class=" col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.pais) }}</span>
+                        {{ form_widget(form.pais, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+                    </div></div>
+
+                {{ form_errors(form.departamento) }}
+                <div class=" col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.departamento) }}</span>
+                        {{ form_widget(form.departamento, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+                    </div></div>
+
+                {{ form_errors(form.ciudad) }}
+                <div class=" col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.ciudad) }}</span>
+                        {{ form_widget(form.ciudad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+                    </div></div>
+            </div><br>
+            <div class="row">
+                {{ form_errors(form.localidad) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.localidad) }}</span>
+                        {{ form_widget(form.localidad, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+                    </div></div>
+
+                {{ form_errors(form.direccion) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.direccion) }}</span>
+                        {{ form_widget(form.direccion, { 'attr': {'class': 'form-control','aria-describedby': 'basic-addon3'} }) }}
+                    </div></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {{ form_widget(form.save, { 'attr': {'class': 'btn btn-success col-md-12'} }) }}
+</div>
+
+{{ form_end(form) }}
+
+{% endblock %}

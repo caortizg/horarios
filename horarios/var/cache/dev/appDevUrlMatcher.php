@@ -109,20 +109,36 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\DefaultController::indexAction',  '_route' => 'caog_horarios_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/user')) {
-            // caog_horarios_user_register
-            if ($pathinfo === '/user/register') {
-                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::registrarAction',  '_route' => 'caog_horarios_user_register',);
+        if (0 === strpos($pathinfo, '/us')) {
+            if (0 === strpos($pathinfo, '/user')) {
+                // caog_horarios_user_register
+                if ($pathinfo === '/user/register') {
+                    return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::registrarAction',  '_route' => 'caog_horarios_user_register',);
+                }
+
+                // caog_horarios_user_list
+                if ($pathinfo === '/user/list') {
+                    return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::listAction',  '_route' => 'caog_horarios_user_list',);
+                }
+
+                if (0 === strpos($pathinfo, '/user/actividad')) {
+                    // caog_horarios_usuario_actividad_register
+                    if (0 === strpos($pathinfo, '/user/actividad/register') && preg_match('#^/user/actividad/register(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_usuario_actividad_register')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::registrarAction',  'id' => 0,));
+                    }
+
+                    // caog_horarios_usuario_actividad_list
+                    if (0 === strpos($pathinfo, '/user/actividad/list') && preg_match('#^/user/actividad/list(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_usuario_actividad_list')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::listAction',  'id' => 0,));
+                    }
+
+                }
+
             }
 
-            // caog_horarios_user_list
-            if ($pathinfo === '/user/list') {
-                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::listAction',  '_route' => 'caog_horarios_user_list',);
-            }
-
-            // caog_horarios_usuario_actividad_register
-            if ($pathinfo === '/user/actividad/register') {
-                return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::registrarAction',  '_route' => 'caog_horarios_usuario_actividad_register',);
+            // caog_horarios_usuario_actividad_vincular
+            if (0 === strpos($pathinfo, '/usuario/actividad/vincular') && preg_match('#^/usuario/actividad/vincular(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_usuario_actividad_vincular')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::vincularAction',  'id' => 0,));
             }
 
         }

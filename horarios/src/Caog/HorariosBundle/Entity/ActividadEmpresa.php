@@ -100,7 +100,7 @@ class ActividadEmpresa
      *
      * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\Empresa")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="empresa_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
      * })
      */
     private $empresa;
