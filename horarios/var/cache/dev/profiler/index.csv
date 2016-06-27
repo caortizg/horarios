@@ -45,3 +45,11 @@ a2f64b,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466
 1af5de,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/register,1466999119,,200
 a18a72,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999124,,200
 38cde6,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/register/1,1466999128,,200
+fb7bc1,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/register,1466999369,,200
+1ee84d,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999375,,200
+d3eb51,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/list/1,1466999378,,200
+a72d23,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999402,,200
+89956a,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/register/1,1466999407,,200
+20964a,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999418,,200
+3dce11,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999423,,200
+dbc959,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/list/1,1466999428,,200

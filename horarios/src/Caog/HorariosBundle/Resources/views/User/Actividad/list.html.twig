@@ -91,7 +91,9 @@
             <td>{{actividad.Localidad}}</td>
             <td>{{actividad.Direccion}}</td>
             <td>
-                <a class="btn btn-success" href="{{path('caog_horarios_usuario_actividad_vincular', {'id': actividad.id})}}"><i class="glyphicon glyphicon-plus"></i> Informacion</a>
+                {% if actividad.tipo == 1%}
+                    <a class="btn btn-success" href="{{path('caog_horarios_usuario_actividad_vincular', {'id': actividad.id})}}"><i class="glyphicon glyphicon-plus"></i> Informacion</a>
+                {% endif %}
             </td>
         </tr>
     {% endfor %}
