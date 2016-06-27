@@ -15,8 +15,8 @@ class __TwigTemplate_6f31cc57078d395775f261c9ee2e01aa630dc3d9b11c337a3d81de62adf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ee93a1a3946de8eb32bdaeb643ea2996763813fd2d975e88fe6931b0fbbca6db = $this->env->getExtension("native_profiler");
-        $__internal_ee93a1a3946de8eb32bdaeb643ea2996763813fd2d975e88fe6931b0fbbca6db->enter($__internal_ee93a1a3946de8eb32bdaeb643ea2996763813fd2d975e88fe6931b0fbbca6db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle::/general/header.html.twig"));
+        $__internal_0b86abb17543aed0ef44b8d4f07dc46bdf76ada68574815f9263dbbb9cbe20f4 = $this->env->getExtension("native_profiler");
+        $__internal_0b86abb17543aed0ef44b8d4f07dc46bdf76ada68574815f9263dbbb9cbe20f4->enter($__internal_0b86abb17543aed0ef44b8d4f07dc46bdf76ada68574815f9263dbbb9cbe20f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle::/general/header.html.twig"));
 
         // line 1
         echo "<header>
@@ -70,7 +70,7 @@ class __TwigTemplate_6f31cc57078d395775f261c9ee2e01aa630dc3d9b11c337a3d81de62adf
     </nav>
 </header>";
         
-        $__internal_ee93a1a3946de8eb32bdaeb643ea2996763813fd2d975e88fe6931b0fbbca6db->leave($__internal_ee93a1a3946de8eb32bdaeb643ea2996763813fd2d975e88fe6931b0fbbca6db_prof);
+        $__internal_0b86abb17543aed0ef44b8d4f07dc46bdf76ada68574815f9263dbbb9cbe20f4->leave($__internal_0b86abb17543aed0ef44b8d4f07dc46bdf76ada68574815f9263dbbb9cbe20f4_prof);
 
     }
 

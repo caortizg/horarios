@@ -1,6 +1,6 @@
 <?php
 
-/* CaogHorariosBundle:User/Actividad:register.html.twig */
+/* CaogHorariosBundle:User:Actividad/register.html.twig */
 class __TwigTemplate_d8c5a00628cc6b06881b810f6eaf51fc6767640329c532576fe501d6e1727066 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_d8c5a00628cc6b06881b810f6eaf51fc6767640329c532576fe501d6e17
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User/Actividad:register.html.twig", 1);
+        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User:Actividad/register.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,8 +21,8 @@ class __TwigTemplate_d8c5a00628cc6b06881b810f6eaf51fc6767640329c532576fe501d6e17
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6b1bd3c021bdd0aebba1251990740eb7026751dfc57af92a1ae36c824d3ba2df = $this->env->getExtension("native_profiler");
-        $__internal_6b1bd3c021bdd0aebba1251990740eb7026751dfc57af92a1ae36c824d3ba2df->enter($__internal_6b1bd3c021bdd0aebba1251990740eb7026751dfc57af92a1ae36c824d3ba2df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User/Actividad:register.html.twig"));
+        $__internal_8d3979d392d30cef0ae19172f5a6d70e7658b259c57a464115fed41781fa5495 = $this->env->getExtension("native_profiler");
+        $__internal_8d3979d392d30cef0ae19172f5a6d70e7658b259c57a464115fed41781fa5495->enter($__internal_8d3979d392d30cef0ae19172f5a6d70e7658b259c57a464115fed41781fa5495_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:Actividad/register.html.twig"));
 
         // line 2
         if ( !array_key_exists("titleBody", $context)) {
@@ -31,15 +31,15 @@ class __TwigTemplate_d8c5a00628cc6b06881b810f6eaf51fc6767640329c532576fe501d6e17
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6b1bd3c021bdd0aebba1251990740eb7026751dfc57af92a1ae36c824d3ba2df->leave($__internal_6b1bd3c021bdd0aebba1251990740eb7026751dfc57af92a1ae36c824d3ba2df_prof);
+        $__internal_8d3979d392d30cef0ae19172f5a6d70e7658b259c57a464115fed41781fa5495->leave($__internal_8d3979d392d30cef0ae19172f5a6d70e7658b259c57a464115fed41781fa5495_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_945eaade05eb49efd47296b7156736ffe381b5d79f03473fcc5437869498120a = $this->env->getExtension("native_profiler");
-        $__internal_945eaade05eb49efd47296b7156736ffe381b5d79f03473fcc5437869498120a->enter($__internal_945eaade05eb49efd47296b7156736ffe381b5d79f03473fcc5437869498120a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8345ce3c15c839087bfb82f06904b1985cb39fd0f169df5eb15fe2016882d36f = $this->env->getExtension("native_profiler");
+        $__internal_8345ce3c15c839087bfb82f06904b1985cb39fd0f169df5eb15fe2016882d36f->enter($__internal_8345ce3c15c839087bfb82f06904b1985cb39fd0f169df5eb15fe2016882d36f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -209,13 +209,13 @@ class __TwigTemplate_d8c5a00628cc6b06881b810f6eaf51fc6767640329c532576fe501d6e17
 
 ";
         
-        $__internal_945eaade05eb49efd47296b7156736ffe381b5d79f03473fcc5437869498120a->leave($__internal_945eaade05eb49efd47296b7156736ffe381b5d79f03473fcc5437869498120a_prof);
+        $__internal_8345ce3c15c839087bfb82f06904b1985cb39fd0f169df5eb15fe2016882d36f->leave($__internal_8345ce3c15c839087bfb82f06904b1985cb39fd0f169df5eb15fe2016882d36f_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "CaogHorariosBundle:User/Actividad:register.html.twig";
+        return "CaogHorariosBundle:User:Actividad/register.html.twig";
     }
 
     public function isTraitable()
