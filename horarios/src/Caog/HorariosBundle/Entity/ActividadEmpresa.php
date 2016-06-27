@@ -50,6 +50,21 @@ class ActividadEmpresa
      * @ORM\Column(name="prioridad", type="integer", nullable=false)
      */
     private $prioridad;
+    
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tm_diario", type="integer", nullable=false)
+     */
+    private $tiempoMDiario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tm_semanal", type="integer", nullable=false)
+     */
+    private $tiempoMSemanal;
 
     /**
      * @var string
@@ -331,5 +346,93 @@ class ActividadEmpresa
     public function getEmpresa()
     {
         return $this->empresa;
+    }
+
+
+    /**
+     * Set tiempoMDiario
+     *
+     * @param integer $tiempoMDiario
+     *
+     * @return ActividadEmpresa
+     */
+    public function setTiempoMDiario($tiempoMDiario)
+    {
+        $this->tiempoMDiario = $tiempoMDiario;
+
+        return $this;
+    }
+
+    /**
+     * Get tiempoMDiario
+     *
+     * @return integer
+     */
+    public function getTiempoMDiario()
+    {
+        return $this->tiempoMDiario;
+    }
+
+    /**
+     * Set tiempoMSemanal
+     *
+     * @param integer $tiempoMSemanal
+     *
+     * @return ActividadEmpresa
+     */
+    public function setTiempoMSemanal($tiempoMSemanal)
+    {
+        $this->tiempoMSemanal = $tiempoMSemanal;
+
+        return $this;
+    }
+
+    /**
+     * Get tiempoMSemanal
+     *
+     * @return integer
+     */
+    public function getTiempoMSemanal()
+    {
+        return $this->tiempoMSemanal;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $franjas;
+
+
+    /**
+     * Add franja
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadUsuario $franja
+     *
+     * @return ActividadEmpresa
+     */
+    public function addFranja(\Caog\HorariosBundle\Entity\ActividadUsuario $franja)
+    {
+        $this->franjas[] = $franja;
+
+        return $this;
+    }
+
+    /**
+     * Remove franja
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadUsuario $franja
+     */
+    public function removeFranja(\Caog\HorariosBundle\Entity\ActividadUsuario $franja)
+    {
+        $this->franjas->removeElement($franja);
+    }
+
+    /**
+     * Get franjas
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFranjas()
+    {
+        return $this->franjas;
     }
 }

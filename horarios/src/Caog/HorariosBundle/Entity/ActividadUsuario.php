@@ -3,6 +3,7 @@
 namespace Caog\HorariosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * ActividadUsuario
@@ -86,9 +87,17 @@ class ActividadUsuario
      * })
      */
     private $usuario;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Caog\HorariosBundle\Entity\ActividadFranja", mappedBy="Caog\HorariosBundle\Entity\ActividadUsuario")
+     */
+    protected $franjas;
+    
+    function __construct() {
+        $this->franjas = new ArrayCollection();
+    }
 
-
-
+    
     /**
      * Set nombre
      *
@@ -312,5 +321,39 @@ class ActividadUsuario
     public function getUsuario()
     {
         return $this->usuario;
+    }
+
+    /**
+     * Add franja
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadFranja $franja
+     *
+     * @return ActividadUsuario
+     */
+    public function addFranja(\Caog\HorariosBundle\Entity\ActividadFranja $franja)
+    {
+        $this->franjas[] = $franja;
+
+        return $this;
+    }
+
+    /**
+     * Remove franja
+     *
+     * @param \Caog\HorariosBundle\Entity\ActividadFranja $franja
+     */
+    public function removeFranja(\Caog\HorariosBundle\Entity\ActividadFranja $franja)
+    {
+        $this->franjas->removeElement($franja);
+    }
+
+    /**
+     * Get franjas
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFranjas()
+    {
+        return $this->franjas;
     }
 }

@@ -1,0 +1,43 @@
+{% set titleBody = 'Horario' %}
+{% extends 'CaogHorariosBundle::layout.html.twig' %}
+{% block body %}
+    {% set dias = {'1': 'Lunes','2':'Martes','3':'Miercoles','4':'Jueves','5':'Viernes','6':'Sabado','7':'Domingo'} %}
+    {% for i in 1..7 %}
+        <div class="{% if i < 6%}col-md-2{% else %}col-md-1{% endif %}" style="padding: 0px !important;">
+            <div class="panel panel-primary" style="margin: 0px !important; border-radius: 0px !important;">
+                <div class="panel-heading" style=" border-radius: 0px !important;">{{dias[i]}}</div>
+                <div class="panel-body" style="padding: 0px !important;">
+                    {% set ti = '00:00:00' %}
+                    {% for franja in franjas %}
+                        {% if franja.actFraDia == i %}
+                            {% set tia = (ti|date('G')*30) + ti|date('i') %}
+                            {% set hi  = ((franja.actHoraInicio|date('G')*30)+franja.actHoraInicio|date('i')) %}
+                            {% set tia = hi - tia %}
+                            {% if tia > 0 %}
+                                <div style="height: 40px; background-color:rgba(84, 158, 3, 0.22);">
+                                    Libre<br>
+                                    ({{ti|date('G:i')}}-{{franja.actHoraInicio|date('G:i')}})                       
+                                </div>
+                            {% endif %}
+                            {% set h = (franja.actFraDuracion/60)|round (0,'floor') %}{% set m = franja.actFraDuracion%60 %}
+                            {% set ti = franja.actHoraInicio|date('G:i') %}
+                            {% set ti = ti|date_modify("+"~h~" hour")|date("G:i") %}
+                            {% set ti = ti|date_modify("+"~m~" minute")|date("G:i") %}
+                            <div style="height: 40px; background-color:rgba(158, 3, 3, 0.22);">
+                                Ocupado<br>
+                                ({{franja.actHoraInicio|date('G:i')}}-{{ti}})                      
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% set tia = (24*60) - ((ti|date('G')*30) + ti|date('i')) %}
+                    {% if tia > 0 %}
+                        <div style="height: 40px; background-color:rgba(84, 158, 3, 0.22);">
+                                Libre<br>
+                                ({{ti|date('G:i')}}-{{'24:00'|date('G:i')}})                       
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

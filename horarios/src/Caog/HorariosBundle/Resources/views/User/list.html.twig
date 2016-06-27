@@ -24,6 +24,7 @@
             <td>{{usuario.Localidad}}</td>
             <td>{{usuario.Direccion}}</td>
             <td>
+                <a class="btn btn-primary" href="{{path('caog_horarios_user_timetable', {'id': usuario.id})}}" title="Consultar horario"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-calendar"></i></a>
                 <a class="btn btn-success" href="{{path('caog_horarios_usuario_actividad_register', {'id': usuario.id})}}" title="Adicionar actividad"><i class="glyphicon glyphicon-plus"></i> <i class="glyphicon glyphicon-blackboard"></i></a>
                 <a class="btn btn-info" href="{{path('caog_horarios_usuario_actividad_list', {'id': usuario.id})}}"  title="Consultar actividades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-blackboard"></i></a>
                 <a class="btn btn-success" href="#" title="Vincular entidad"><i class="glyphicon glyphicon-link"></i> <i class="glyphicon glyphicon-tent"></i></a>

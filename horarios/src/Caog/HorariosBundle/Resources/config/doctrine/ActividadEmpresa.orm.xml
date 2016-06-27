@@ -22,6 +22,16 @@
         <option name="unsigned"/>
       </options>
     </field>
+    <field name="tiempoMDiario" type="integer" column="tm_diario" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="tiempoMSemanal" type="integer" column="tm_semanal" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
     <field name="pais" type="string" column="pais" length="100" nullable="false">
       <options>
         <option name="fixed"/>

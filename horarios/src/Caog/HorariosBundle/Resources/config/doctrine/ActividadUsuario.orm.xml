@@ -44,6 +44,11 @@
         <option name="fixed"/>
       </options>
     </field>
+    
+    <one-to-many
+            field="franjas"
+            target-entity="\Caog\HorariosBundle\Entity\ActividadFranja"
+            mapped-by="\Caog\HorariosBundle\Entity\ActividadUsuario" />
      <many-to-one field="usuario" target-entity="Usuario" fetch="LAZY">
       <join-columns>
         <join-column name="usuario_id" referenced-column-name="id"/>

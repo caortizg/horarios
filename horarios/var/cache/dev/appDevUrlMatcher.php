@@ -121,6 +121,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::listAction',  '_route' => 'caog_horarios_user_list',);
                 }
 
+                // caog_horarios_user_timetable
+                if (0 === strpos($pathinfo, '/user/timetable') && preg_match('#^/user/timetable(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_user_timetable')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\UsuarioController::timetableAction',  'id' => 0,));
+                }
+
                 if (0 === strpos($pathinfo, '/user/actividad')) {
                     // caog_horarios_usuario_actividad_register
                     if (0 === strpos($pathinfo, '/user/actividad/register') && preg_match('#^/user/actividad/register(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {

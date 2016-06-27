@@ -8,6 +8,9 @@ caog_horarios_user_register:
 caog_horarios_user_list:
     path: /user/list
     defaults: { _controller: CaogHorariosBundle:Usuario:list}
+caog_horarios_user_timetable:
+    path: /user/timetable/{id}
+    defaults: { _controller: CaogHorariosBundle:Usuario:timetable, id: 0}
 # Usuario->Actividad:
 caog_horarios_usuario_actividad_register:
     path: /user/actividad/register/{id}
