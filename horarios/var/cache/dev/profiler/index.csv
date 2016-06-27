@@ -3,3 +3,6 @@
 625175,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1466999755,,200
 ae2432,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/register/1,1466999793,,200
 6a6e95,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/list/1,1466999799,,200
+b0bb7c,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/,1467001450,,200
+9932d5,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/list,1467001456,,200
+36f715,::1,GET,http://localhost/horarios/horarios/web/app_dev.php/user/actividad/list/1,1467001464,,200
