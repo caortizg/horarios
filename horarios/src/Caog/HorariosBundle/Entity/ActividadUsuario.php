@@ -87,6 +87,7 @@ class ActividadUsuario
      * })
      */
     private $usuario;
+
     
     /**
      * @ORM\OneToMany(targetEntity="Caog\HorariosBundle\Entity\ActividadFranja", mappedBy="Caog\HorariosBundle\Entity\ActividadUsuario")
@@ -96,6 +97,16 @@ class ActividadUsuario
     function __construct() {
         $this->franjas = new ArrayCollection();
     }
+        
+    /**
+     * @var \Caog\HorariosBundle\Entity\Empresa
+     *
+     * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\Empresa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * })
+     */
+    private $empresa;
 
     
     /**
@@ -336,7 +347,7 @@ class ActividadUsuario
 
         return $this;
     }
-
+    
     /**
      * Remove franja
      *
@@ -355,5 +366,28 @@ class ActividadUsuario
     public function getFranjas()
     {
         return $this->franjas;
+    }
+        
+     /**
+     * Set empresa
+     *
+     * @param \Caog\HorariosBundle\Entity\Empresa $empresa
+     *
+     * @return Empresa
+     */
+    public function setEmpresa(\Caog\HorariosBundle\Entity\Empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \Caog\HorariosBundle\Entity\Empresa
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
     }
 }
