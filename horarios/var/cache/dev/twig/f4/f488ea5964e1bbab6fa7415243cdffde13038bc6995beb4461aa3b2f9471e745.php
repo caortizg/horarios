@@ -22,8 +22,8 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d5177028623ebdc72d8310151cacafcc95705b6f634076b166b2df40bf630c2e = $this->env->getExtension("native_profiler");
-        $__internal_d5177028623ebdc72d8310151cacafcc95705b6f634076b166b2df40bf630c2e->enter($__internal_d5177028623ebdc72d8310151cacafcc95705b6f634076b166b2df40bf630c2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CaogHorarios/User/list.html.twig"));
+        $__internal_f022f30561dae785bc02a4ac7c8ecc7ccb4d364f72987afd754b1f7c463be535 = $this->env->getExtension("native_profiler");
+        $__internal_f022f30561dae785bc02a4ac7c8ecc7ccb4d364f72987afd754b1f7c463be535->enter($__internal_f022f30561dae785bc02a4ac7c8ecc7ccb4d364f72987afd754b1f7c463be535_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CaogHorarios/User/list.html.twig"));
 
         // line 1
         $context["idList"] = "listUsers";
@@ -32,15 +32,15 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
         // line 3
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d5177028623ebdc72d8310151cacafcc95705b6f634076b166b2df40bf630c2e->leave($__internal_d5177028623ebdc72d8310151cacafcc95705b6f634076b166b2df40bf630c2e_prof);
+        $__internal_f022f30561dae785bc02a4ac7c8ecc7ccb4d364f72987afd754b1f7c463be535->leave($__internal_f022f30561dae785bc02a4ac7c8ecc7ccb4d364f72987afd754b1f7c463be535_prof);
 
     }
 
     // line 4
     public function block_theadList($context, array $blocks = array())
     {
-        $__internal_d9d7423a5ff036bf9f942f553ae9195d3c7166f62f3b07d101bc9c5108927892 = $this->env->getExtension("native_profiler");
-        $__internal_d9d7423a5ff036bf9f942f553ae9195d3c7166f62f3b07d101bc9c5108927892->enter($__internal_d9d7423a5ff036bf9f942f553ae9195d3c7166f62f3b07d101bc9c5108927892_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
+        $__internal_9dbdeb6699d272694102faf05f8079770e7c0b46ad7ea6976f9c613b0ffcc638 = $this->env->getExtension("native_profiler");
+        $__internal_9dbdeb6699d272694102faf05f8079770e7c0b46ad7ea6976f9c613b0ffcc638->enter($__internal_9dbdeb6699d272694102faf05f8079770e7c0b46ad7ea6976f9c613b0ffcc638_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
 
         // line 5
         echo "    <th>Name</th>
@@ -54,15 +54,15 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
     <th>Opciones</th>
 ";
         
-        $__internal_d9d7423a5ff036bf9f942f553ae9195d3c7166f62f3b07d101bc9c5108927892->leave($__internal_d9d7423a5ff036bf9f942f553ae9195d3c7166f62f3b07d101bc9c5108927892_prof);
+        $__internal_9dbdeb6699d272694102faf05f8079770e7c0b46ad7ea6976f9c613b0ffcc638->leave($__internal_9dbdeb6699d272694102faf05f8079770e7c0b46ad7ea6976f9c613b0ffcc638_prof);
 
     }
 
     // line 15
     public function block_tbodyList($context, array $blocks = array())
     {
-        $__internal_6a0afe72ba34910a5143c291522e4d1011daa9fbe7699f20e88b24f7d5d22dcc = $this->env->getExtension("native_profiler");
-        $__internal_6a0afe72ba34910a5143c291522e4d1011daa9fbe7699f20e88b24f7d5d22dcc->enter($__internal_6a0afe72ba34910a5143c291522e4d1011daa9fbe7699f20e88b24f7d5d22dcc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
+        $__internal_fa252da3204c3bcbef30ad26c4afbb1f32d9dc165f3b3fb1a819c957afeb039d = $this->env->getExtension("native_profiler");
+        $__internal_fa252da3204c3bcbef30ad26c4afbb1f32d9dc165f3b3fb1a819c957afeb039d->enter($__internal_fa252da3204c3bcbef30ad26c4afbb1f32d9dc165f3b3fb1a819c957afeb039d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
 
         // line 16
         echo "    ";
@@ -108,7 +108,10 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
             // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("caog_horarios_usuario_actividad_register", array("id" => $this->getAttribute($context["usuario"], "id", array()))), "html", null, true);
             echo "\" title=\"Adicionar actividad\"><i class=\"glyphicon glyphicon-plus\"></i> <i class=\"glyphicon glyphicon-blackboard\"></i></a>
-                <a class=\"btn btn-info\" href=\"#\" title=\"Consultar actividades\"><i class=\"glyphicon glyphicon-search\"></i> <i class=\"glyphicon glyphicon-blackboard\"></i></a>
+                <a class=\"btn btn-info\" href=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("caog_horarios_usuario_actividad_list", array("id" => $this->getAttribute($context["usuario"], "id", array()))), "html", null, true);
+            echo "\"  title=\"Consultar actividades\"><i class=\"glyphicon glyphicon-search\"></i> <i class=\"glyphicon glyphicon-blackboard\"></i></a>
                 <a class=\"btn btn-success\" href=\"#\" title=\"Vincular entidad\"><i class=\"glyphicon glyphicon-link\"></i> <i class=\"glyphicon glyphicon-tent\"></i></a>
                 <a class=\"btn btn-info\" href=\"#\" title=\"Consultar entidades\"><i class=\"glyphicon glyphicon-search\"></i> <i class=\"glyphicon glyphicon-tent\"></i></a>
             </td>
@@ -119,7 +122,7 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['usuario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_6a0afe72ba34910a5143c291522e4d1011daa9fbe7699f20e88b24f7d5d22dcc->leave($__internal_6a0afe72ba34910a5143c291522e4d1011daa9fbe7699f20e88b24f7d5d22dcc_prof);
+        $__internal_fa252da3204c3bcbef30ad26c4afbb1f32d9dc165f3b3fb1a819c957afeb039d->leave($__internal_fa252da3204c3bcbef30ad26c4afbb1f32d9dc165f3b3fb1a819c957afeb039d_prof);
 
     }
 
@@ -135,7 +138,7 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
 
     public function getDebugInfo()
     {
-        return array (  109 => 27,  104 => 25,  100 => 24,  96 => 23,  92 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  73 => 17,  68 => 16,  62 => 15,  46 => 5,  40 => 4,  33 => 3,  31 => 2,  29 => 1,  11 => 3,);
+        return array (  113 => 28,  109 => 27,  104 => 25,  100 => 24,  96 => 23,  92 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  73 => 17,  68 => 16,  62 => 15,  46 => 5,  40 => 4,  33 => 3,  31 => 2,  29 => 1,  11 => 3,);
     }
 }
 /* {% set idList = 'listUsers' %}*/
@@ -165,7 +168,7 @@ class __TwigTemplate_9c8d202781e996a6d6945b04d04e3b8b21a179f2e2a20fd183f6268be4c
 /*             <td>{{usuario.Direccion}}</td>*/
 /*             <td>*/
 /*                 <a class="btn btn-success" href="{{path('caog_horarios_usuario_actividad_register', {'id': usuario.id})}}" title="Adicionar actividad"><i class="glyphicon glyphicon-plus"></i> <i class="glyphicon glyphicon-blackboard"></i></a>*/
-/*                 <a class="btn btn-info" href="#" title="Consultar actividades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-blackboard"></i></a>*/
+/*                 <a class="btn btn-info" href="{{path('caog_horarios_usuario_actividad_list', {'id': usuario.id})}}"  title="Consultar actividades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-blackboard"></i></a>*/
 /*                 <a class="btn btn-success" href="#" title="Vincular entidad"><i class="glyphicon glyphicon-link"></i> <i class="glyphicon glyphicon-tent"></i></a>*/
 /*                 <a class="btn btn-info" href="#" title="Consultar entidades"><i class="glyphicon glyphicon-search"></i> <i class="glyphicon glyphicon-tent"></i></a>*/
 /*             </td>*/

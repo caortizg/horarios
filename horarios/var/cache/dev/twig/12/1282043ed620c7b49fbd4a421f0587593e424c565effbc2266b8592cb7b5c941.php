@@ -1,6 +1,6 @@
 <?php
 
-/* CaogHorariosBundle:User:Actividad/registered.html.twig */
+/* CaogHorariosBundle:User/Actividad:registered.html.twig */
 class __TwigTemplate_a5cac4b639c0295edeff85a0c67fb6f30620113fdcabf6d43e3a7f44d56d0c79 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_a5cac4b639c0295edeff85a0c67fb6f30620113fdcabf6d43e3a7f44d56
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User:Actividad/registered.html.twig", 2);
+        $this->parent = $this->loadTemplate("CaogHorariosBundle::layout.html.twig", "CaogHorariosBundle:User/Actividad:registered.html.twig", 2);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,23 +21,23 @@ class __TwigTemplate_a5cac4b639c0295edeff85a0c67fb6f30620113fdcabf6d43e3a7f44d56
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2798f1b1dbaf82942deac6faed54b5ef0c9b490b98e68367482205e99ddd4788 = $this->env->getExtension("native_profiler");
-        $__internal_2798f1b1dbaf82942deac6faed54b5ef0c9b490b98e68367482205e99ddd4788->enter($__internal_2798f1b1dbaf82942deac6faed54b5ef0c9b490b98e68367482205e99ddd4788_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:Actividad/registered.html.twig"));
+        $__internal_26d55e91c142db6cb40becfa362fe10e7f85fa17970a928d29c4e7cd20159087 = $this->env->getExtension("native_profiler");
+        $__internal_26d55e91c142db6cb40becfa362fe10e7f85fa17970a928d29c4e7cd20159087->enter($__internal_26d55e91c142db6cb40becfa362fe10e7f85fa17970a928d29c4e7cd20159087_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User/Actividad:registered.html.twig"));
 
         // line 1
         $context["titleBody"] = "Resumen del registro";
         // line 2
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2798f1b1dbaf82942deac6faed54b5ef0c9b490b98e68367482205e99ddd4788->leave($__internal_2798f1b1dbaf82942deac6faed54b5ef0c9b490b98e68367482205e99ddd4788_prof);
+        $__internal_26d55e91c142db6cb40becfa362fe10e7f85fa17970a928d29c4e7cd20159087->leave($__internal_26d55e91c142db6cb40becfa362fe10e7f85fa17970a928d29c4e7cd20159087_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1b771a36aa201ebee15ff379948d8ce4274ee638ca2987f4bbaf91cc5bc1ab1e = $this->env->getExtension("native_profiler");
-        $__internal_1b771a36aa201ebee15ff379948d8ce4274ee638ca2987f4bbaf91cc5bc1ab1e->enter($__internal_1b771a36aa201ebee15ff379948d8ce4274ee638ca2987f4bbaf91cc5bc1ab1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a4b039ccf8994ba0665a12bbc5777aad1a39598b2ed6ae619762f8cedaeaf4be = $this->env->getExtension("native_profiler");
+        $__internal_a4b039ccf8994ba0665a12bbc5777aad1a39598b2ed6ae619762f8cedaeaf4be->enter($__internal_a4b039ccf8994ba0665a12bbc5777aad1a39598b2ed6ae619762f8cedaeaf4be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <div class=\"panel panel-success\">
@@ -117,13 +117,13 @@ class __TwigTemplate_a5cac4b639c0295edeff85a0c67fb6f30620113fdcabf6d43e3a7f44d56
     </div>
 ";
         
-        $__internal_1b771a36aa201ebee15ff379948d8ce4274ee638ca2987f4bbaf91cc5bc1ab1e->leave($__internal_1b771a36aa201ebee15ff379948d8ce4274ee638ca2987f4bbaf91cc5bc1ab1e_prof);
+        $__internal_a4b039ccf8994ba0665a12bbc5777aad1a39598b2ed6ae619762f8cedaeaf4be->leave($__internal_a4b039ccf8994ba0665a12bbc5777aad1a39598b2ed6ae619762f8cedaeaf4be_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "CaogHorariosBundle:User:Actividad/registered.html.twig";
+        return "CaogHorariosBundle:User/Actividad:registered.html.twig";
     }
 
     public function isTraitable()

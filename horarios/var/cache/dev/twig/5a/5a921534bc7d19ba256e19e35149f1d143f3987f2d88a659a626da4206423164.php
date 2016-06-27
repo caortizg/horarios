@@ -10,6 +10,7 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
         // line 3
         $this->parent = $this->loadTemplate("CaogHorariosBundle::/general/listBase.html.twig", "CaogHorariosBundle:User:Actividad/list.html.twig", 3);
         $this->blocks = array(
+            'javascripts' => array($this, 'block_javascripts'),
             'body' => array($this, 'block_body'),
             'theadList' => array($this, 'block_theadList'),
             'tbodyList' => array($this, 'block_tbodyList'),
@@ -23,8 +24,8 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_587fdeaa8803ece0d2273484e423658099e17577ca31ad89379f1cb521bbcc91 = $this->env->getExtension("native_profiler");
-        $__internal_587fdeaa8803ece0d2273484e423658099e17577ca31ad89379f1cb521bbcc91->enter($__internal_587fdeaa8803ece0d2273484e423658099e17577ca31ad89379f1cb521bbcc91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:Actividad/list.html.twig"));
+        $__internal_6ad8fff601e98f595a32ef69aa831691284a26a5e266499cbecc0044cbba5cc4 = $this->env->getExtension("native_profiler");
+        $__internal_6ad8fff601e98f595a32ef69aa831691284a26a5e266499cbecc0044cbba5cc4->enter($__internal_6ad8fff601e98f595a32ef69aa831691284a26a5e266499cbecc0044cbba5cc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CaogHorariosBundle:User:Actividad/list.html.twig"));
 
         // line 1
         $context["idList"] = "listCompanies";
@@ -33,28 +34,102 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
         // line 3
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_587fdeaa8803ece0d2273484e423658099e17577ca31ad89379f1cb521bbcc91->leave($__internal_587fdeaa8803ece0d2273484e423658099e17577ca31ad89379f1cb521bbcc91_prof);
+        $__internal_6ad8fff601e98f595a32ef69aa831691284a26a5e266499cbecc0044cbba5cc4->leave($__internal_6ad8fff601e98f595a32ef69aa831691284a26a5e266499cbecc0044cbba5cc4_prof);
 
     }
 
-    // line 4
+    // line 6
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_ff68cc40ed7627f11c84cf44dc00d540e50c06fcd5bae6542cdc59bc0e88fd29 = $this->env->getExtension("native_profiler");
+        $__internal_ff68cc40ed7627f11c84cf44dc00d540e50c06fcd5bae6542cdc59bc0e88fd29->enter($__internal_ff68cc40ed7627f11c84cf44dc00d540e50c06fcd5bae6542cdc59bc0e88fd29_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 7
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+    <script src=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/fullcalendar-2.8.0/lib/moment.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <script src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/fullcalendar-2.8.0/fullcalendar.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+    <script src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/fullcalendar-2.8.0/lang-all.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+";
+        
+        $__internal_ff68cc40ed7627f11c84cf44dc00d540e50c06fcd5bae6542cdc59bc0e88fd29->leave($__internal_ff68cc40ed7627f11c84cf44dc00d540e50c06fcd5bae6542cdc59bc0e88fd29_prof);
+
+    }
+
+    // line 13
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9fd7f620a520836e9b93b8f2a1524bffead1088cd9d5eb8506c21e9083a44ff4 = $this->env->getExtension("native_profiler");
-        $__internal_9fd7f620a520836e9b93b8f2a1524bffead1088cd9d5eb8506c21e9083a44ff4->enter($__internal_9fd7f620a520836e9b93b8f2a1524bffead1088cd9d5eb8506c21e9083a44ff4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cb35074d4fdea1bbf399154a3b715d3cbd6758e2aaadea9a126d2ba9e382d866 = $this->env->getExtension("native_profiler");
+        $__internal_cb35074d4fdea1bbf399154a3b715d3cbd6758e2aaadea9a126d2ba9e382d866->enter($__internal_cb35074d4fdea1bbf399154a3b715d3cbd6758e2aaadea9a126d2ba9e382d866_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
-        echo "    <div class=\"row\">
+        // line 14
+        echo "    <script type=\"text/javascript\">
+        \$(document).ready(function() {
+\t\tvar currentLangCode = 'es';
+
+\t\t// build the language selector's options
+\t\t\$.each(\$.fullCalendar.langs, function(langCode) {
+\t\t\t\$('#lang-selector').append(
+\t\t\t\t\$('<option/>')
+\t\t\t\t\t.attr('value', langCode)
+\t\t\t\t\t.prop('selected', langCode == currentLangCode)
+\t\t\t\t\t.text(langCode)
+\t\t\t);
+\t\t});
+
+\t\t// rerender the calendar when the selected option changes
+\t\t\$('#lang-selector').on('change', function() {
+\t\t\tif (this.value) {
+\t\t\t\tcurrentLangCode = this.value;
+\t\t\t\t\$('#calendar').fullCalendar('destroy');
+\t\t\t\trenderCalendar();
+\t\t\t}
+\t\t});
+
+\t\tfunction renderCalendar() {
+\t\t\t\$('#calendar').fullCalendar({
+\t\t\t\theader: {
+\t\t\t\t\tleft: 'prev,next today',
+\t\t\t\t\tcenter: 'title',
+\t\t\t\t\tright: 'month,agendaWeek,agendaDay'
+\t\t\t\t},
+\t\t\t\tdefaultDate: '2016-06-12',
+\t\t\t\tlang: currentLangCode,
+\t\t\t\tbuttonIcons: false, // show the prev/next text
+\t\t\t\tweekNumbers: true,
+\t\t\t\teditable: true,
+\t\t\t\teventLimit: true, // allow \"more\" link when too many events
+\t\t\t\t
+\t\t\t});
+\t\t}
+
+\t\trenderCalendar();
+\t});
+    </script>
+    <div id='calendar'>
+        
+    </div>
+    <div class=\"row\">
         ";
-        // line 6
+        // line 61
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashbag", array()), "get", array(0 => "mensaje"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 7
+            // line 62
             echo "            <div class=\"alert alert-success\">
                 <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
                 ";
-            // line 9
+            // line 64
             echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
             echo "
             </div>
@@ -63,24 +138,24 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 12
+        // line 67
         echo "        ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
     </div>
 ";
         
-        $__internal_9fd7f620a520836e9b93b8f2a1524bffead1088cd9d5eb8506c21e9083a44ff4->leave($__internal_9fd7f620a520836e9b93b8f2a1524bffead1088cd9d5eb8506c21e9083a44ff4_prof);
+        $__internal_cb35074d4fdea1bbf399154a3b715d3cbd6758e2aaadea9a126d2ba9e382d866->leave($__internal_cb35074d4fdea1bbf399154a3b715d3cbd6758e2aaadea9a126d2ba9e382d866_prof);
 
     }
 
-    // line 15
+    // line 70
     public function block_theadList($context, array $blocks = array())
     {
-        $__internal_58ca9a30816641bc0cd3f64248375493fb3a386c1ae836c32ac60e99619513bf = $this->env->getExtension("native_profiler");
-        $__internal_58ca9a30816641bc0cd3f64248375493fb3a386c1ae836c32ac60e99619513bf->enter($__internal_58ca9a30816641bc0cd3f64248375493fb3a386c1ae836c32ac60e99619513bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
+        $__internal_0757f652a0262cc87aa5ed89f9c00b0d6e7d1b7f232dbb8d47df09cecfe8f6dd = $this->env->getExtension("native_profiler");
+        $__internal_0757f652a0262cc87aa5ed89f9c00b0d6e7d1b7f232dbb8d47df09cecfe8f6dd->enter($__internal_0757f652a0262cc87aa5ed89f9c00b0d6e7d1b7f232dbb8d47df09cecfe8f6dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "theadList"));
 
-        // line 16
+        // line 71
         echo "    <th>Nombre</th>
     <th>Tipo</th>
     <th>Prioridad</th>
@@ -92,58 +167,58 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
     <th>Opciones</th>
 ";
         
-        $__internal_58ca9a30816641bc0cd3f64248375493fb3a386c1ae836c32ac60e99619513bf->leave($__internal_58ca9a30816641bc0cd3f64248375493fb3a386c1ae836c32ac60e99619513bf_prof);
+        $__internal_0757f652a0262cc87aa5ed89f9c00b0d6e7d1b7f232dbb8d47df09cecfe8f6dd->leave($__internal_0757f652a0262cc87aa5ed89f9c00b0d6e7d1b7f232dbb8d47df09cecfe8f6dd_prof);
 
     }
 
-    // line 26
+    // line 81
     public function block_tbodyList($context, array $blocks = array())
     {
-        $__internal_d65a2ab909d30e6c9f2d0971a60ec20046318838cfb411969d8925df0cebc03f = $this->env->getExtension("native_profiler");
-        $__internal_d65a2ab909d30e6c9f2d0971a60ec20046318838cfb411969d8925df0cebc03f->enter($__internal_d65a2ab909d30e6c9f2d0971a60ec20046318838cfb411969d8925df0cebc03f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
+        $__internal_f5d393565bef0ffbeb55b7e9f032a78de722339b98318f924dbfd749521b2814 = $this->env->getExtension("native_profiler");
+        $__internal_f5d393565bef0ffbeb55b7e9f032a78de722339b98318f924dbfd749521b2814->enter($__internal_f5d393565bef0ffbeb55b7e9f032a78de722339b98318f924dbfd749521b2814_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "tbodyList"));
 
-        // line 27
+        // line 82
         echo "    ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["actividades"]) ? $context["actividades"] : $this->getContext($context, "actividades")));
         foreach ($context['_seq'] as $context["_key"] => $context["actividad"]) {
-            // line 28
+            // line 83
             echo "        <tr>
             <td>";
-            // line 29
+            // line 84
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "nombre", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 30
+            // line 85
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "tipo", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 31
+            // line 86
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "prioridad", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 32
+            // line 87
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "pais", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 33
+            // line 88
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "Departamento", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 34
+            // line 89
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "Ciudad", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 35
+            // line 90
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "Localidad", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 36
+            // line 91
             echo twig_escape_filter($this->env, $this->getAttribute($context["actividad"], "Direccion", array()), "html", null, true);
             echo "</td>
             <td>
                 <a class=\"btn btn-success\" href=\"";
-            // line 38
+            // line 93
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("caog_horarios_usuario_actividad_vincular", array("id" => $this->getAttribute($context["actividad"], "id", array()))), "html", null, true);
             echo "\"><i class=\"glyphicon glyphicon-plus\"></i> Informacion</a>
             </td>
@@ -154,7 +229,7 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actividad'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_d65a2ab909d30e6c9f2d0971a60ec20046318838cfb411969d8925df0cebc03f->leave($__internal_d65a2ab909d30e6c9f2d0971a60ec20046318838cfb411969d8925df0cebc03f_prof);
+        $__internal_f5d393565bef0ffbeb55b7e9f032a78de722339b98318f924dbfd749521b2814->leave($__internal_f5d393565bef0ffbeb55b7e9f032a78de722339b98318f924dbfd749521b2814_prof);
 
     }
 
@@ -170,13 +245,68 @@ class __TwigTemplate_58cd55c16124626224b629d97bbc0e4566d641b0966a7ec5db05530a565
 
     public function getDebugInfo()
     {
-        return array (  147 => 38,  142 => 36,  138 => 35,  134 => 34,  130 => 33,  126 => 32,  122 => 31,  118 => 30,  114 => 29,  111 => 28,  106 => 27,  100 => 26,  84 => 16,  78 => 15,  67 => 12,  58 => 9,  54 => 7,  50 => 6,  47 => 5,  41 => 4,  34 => 3,  32 => 2,  30 => 1,  11 => 3,);
+        return array (  222 => 93,  217 => 91,  213 => 90,  209 => 89,  205 => 88,  201 => 87,  197 => 86,  193 => 85,  189 => 84,  186 => 83,  181 => 82,  175 => 81,  159 => 71,  153 => 70,  142 => 67,  133 => 64,  129 => 62,  125 => 61,  76 => 14,  70 => 13,  61 => 10,  57 => 9,  53 => 8,  48 => 7,  42 => 6,  35 => 3,  33 => 2,  31 => 1,  11 => 3,);
     }
 }
 /* {% set idList = 'listCompanies' %}*/
 /* {% set titleBody = 'Actividades' %}*/
 /* {% extends 'CaogHorariosBundle::/general/listBase.html.twig' %}*/
+/* */
+/* */
+/* {% block javascripts %}*/
+/*     {{parent()}}*/
+/*     <script src="{{ asset('public/fullcalendar-2.8.0/lib/moment.min.js') }}" type="text/javascript"></script>*/
+/*     <script src="{{ asset('public/fullcalendar-2.8.0/fullcalendar.js') }}" type="text/javascript"></script>*/
+/*     <script src="{{ asset('public/fullcalendar-2.8.0/lang-all.js') }}" type="text/javascript"></script>*/
+/* {% endblock %}*/
+/* */
 /* {% block body %}*/
+/*     <script type="text/javascript">*/
+/*         $(document).ready(function() {*/
+/* 		var currentLangCode = 'es';*/
+/* */
+/* 		// build the language selector's options*/
+/* 		$.each($.fullCalendar.langs, function(langCode) {*/
+/* 			$('#lang-selector').append(*/
+/* 				$('<option/>')*/
+/* 					.attr('value', langCode)*/
+/* 					.prop('selected', langCode == currentLangCode)*/
+/* 					.text(langCode)*/
+/* 			);*/
+/* 		});*/
+/* */
+/* 		// rerender the calendar when the selected option changes*/
+/* 		$('#lang-selector').on('change', function() {*/
+/* 			if (this.value) {*/
+/* 				currentLangCode = this.value;*/
+/* 				$('#calendar').fullCalendar('destroy');*/
+/* 				renderCalendar();*/
+/* 			}*/
+/* 		});*/
+/* */
+/* 		function renderCalendar() {*/
+/* 			$('#calendar').fullCalendar({*/
+/* 				header: {*/
+/* 					left: 'prev,next today',*/
+/* 					center: 'title',*/
+/* 					right: 'month,agendaWeek,agendaDay'*/
+/* 				},*/
+/* 				defaultDate: '2016-06-12',*/
+/* 				lang: currentLangCode,*/
+/* 				buttonIcons: false, // show the prev/next text*/
+/* 				weekNumbers: true,*/
+/* 				editable: true,*/
+/* 				eventLimit: true, // allow "more" link when too many events*/
+/* 				*/
+/* 			});*/
+/* 		}*/
+/* */
+/* 		renderCalendar();*/
+/* 	});*/
+/*     </script>*/
+/*     <div id='calendar'>*/
+/*         */
+/*     </div>*/
 /*     <div class="row">*/
 /*         {% for flashMessage in app.session.flashbag.get('mensaje') %}*/
 /*             <div class="alert alert-success">*/
