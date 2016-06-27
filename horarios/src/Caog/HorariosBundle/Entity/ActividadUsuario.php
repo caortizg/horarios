@@ -86,6 +86,16 @@ class ActividadUsuario
      * })
      */
     private $usuario;
+    /**
+     * @var \Caog\HorariosBundle\Entity\Empresa
+     *
+     * @ORM\ManyToOne(targetEntity="Caog\HorariosBundle\Entity\Empresa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * })
+     */
+    private $empresa;
+    
 
 
 
@@ -312,5 +322,28 @@ class ActividadUsuario
     public function getUsuario()
     {
         return $this->usuario;
+    }
+      /**
+     * Set empresa
+     *
+     * @param \Caog\HorariosBundle\Entity\Empresa $empresa
+     *
+     * @return Empresa
+     */
+    public function setEmpresa(\Caog\HorariosBundle\Entity\Empresa $empresa = null)
+    {
+        $this->empresa = $empresa;
+
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \Caog\HorariosBundle\Entity\Empresa
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
     }
 }

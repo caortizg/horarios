@@ -1,9 +1,13 @@
 {% extends 'CaogHorariosBundle::layout.html.twig' %}
 {% if titleBody is not defined %}{% set titleBody = 'Registrar Actividad - Usuario' %}{% endif %}
+{% block javascripts %}
+    {{parent()}}    
+    <script src="{{ asset('public/js/funciones.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('public/js/horarios/usuario/registrarActividad.js') }}" type="text/javascript"></script>
+{% endblock %}
 {% block body %}
     {{ form_start(form) }}
     {{ form_errors(form) }}
-
     <div class="panel panel-default">
         <div class="panel-heading">Datos de la actividad</div>
         <div class="panel-body">
@@ -27,6 +31,13 @@
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon3">{{ form_label(form.prioridad) }}</span>
                         {{ form_widget(form.prioridad, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
+                {{ form_errors(form.empresa) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.empresa) }}</span>
+                        {{ form_widget(form.empresa, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
                     </div>
                 </div>
             </div>

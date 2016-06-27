@@ -9,7 +9,7 @@
 namespace Caog\HorariosBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Caog\HorariosBundle\Entity\ActividadUsuario;
-use Caog\HorariosBundle\Form\Empresa\ActividadType;
+use Caog\HorariosBundle\Form\Usuario\ActividadUsuarioType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Caog\HorariosBundle\Form\ActividadFranjaVincularType;
@@ -33,13 +33,14 @@ class ActividadUsuarioController extends Controller{
                 array('actividades'=>$actividades)
                 );
     }
+    
     public function registrarAction(Request $request, $id){
         $em=$this->getDoctrine()->getManager();
         $usuario = $this->getDoctrine()
             ->getRepository('CaogHorariosBundle:Usuario')
             ->find($id);
         $actividad = new ActividadUsuario();
-        $form = $this->createForm(ActividadType::class, $actividad);
+        $form = $this->createForm(ActividadUsuarioType::class, $actividad);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();

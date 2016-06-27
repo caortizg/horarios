@@ -1,4 +1,4 @@
-function ajax(loadurl,container){
+    function ajax(loadurl,container){
     $.ajax({
         type: 'POST',
         url: loadurl,
