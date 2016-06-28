@@ -46,7 +46,8 @@
     </field>
     <field name="estado" type="integer" column="estado" nullable="true">
       <options>
-        <option name="fixed"/>
+        <option name="unsigned"/>
+        <option name="default">0</option>
       </options>
     </field>
     
