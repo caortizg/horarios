@@ -42,6 +42,9 @@ caog_horarios_empresa_actividad_register:
 caog_horarios_empresa_actividad_getActividadEmpresaAjax:
     path: /empresa/actividad/getActividadEmpresaAjax
     defaults: { _controller: CaogHorariosBundle:ActividadEmpresa:getActividadEmpresaAjax}
+caog_horarios_empresa_actividad_getActividadEmpresa:
+    path: /empresa/actividad/getActividadEmpresa
+    defaults: { _controller: CaogHorariosBundle:ActividadEmpresa:getActividadEmpresa}
     
 caog_horarios_empresa_actividad_list:
     path: /empresa/actividad/list/{idEmpresa}
