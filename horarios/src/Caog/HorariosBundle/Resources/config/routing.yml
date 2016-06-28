@@ -24,6 +24,10 @@ caog_horarios_usuario_actividad_vincular:
     path: /usuario/actividad/vincular/{id}
     defaults: { _controller: CaogHorariosBundle:ActividadUsuario:vincular, id: 0}
     
+caog_horarios_usuario_franjas_publicas_crear:
+    path: /user/franjas/publicas/crear/{idUser}
+    defaults: { _controller: CaogHorariosBundle:ActividadFranja:create, idUser: 0}
+       
 # Empresa
 caog_horarios_empresa_register:
     path: /empresa/register

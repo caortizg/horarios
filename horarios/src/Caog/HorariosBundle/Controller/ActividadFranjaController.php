@@ -66,7 +66,29 @@ class ActividadFranjaController extends Controller{
                     'franjas'=>$franjas_current,
                 ));
     }
-    
+    public function createAction($id){
+        $repository = $this->getDoctrine()
+            ->getRepository('CaogHorariosBundle:ActividadFranja');
+ 
+        $query = $repository->createQueryBuilder('af')
+            ->leftJoin('CaogHorariosBundle:ActividadUsuario','au',"WITH",'af.actUsu = au.id')
+            ->where('au.usuario = '.$id)
+            ->orderBy('af.actFraDia', 'ASC')
+            ->orderBy('af.actHoraInicio', 'ASC')
+            ->getQuery();
+        $franjas = $query->getResult();
+        /*
+        for ($i=0;$i<7;$i++){
+            $hInicio = '00:00';
+            foreach($franjas as $franja){
+                $franja['']
+            }
+        }
+        return $this->render(
+                'CaogHorariosBundle:User:horario.html.twig',
+                array('franjas'=>$query->getResult())
+                );*/
+    }
 }
 
 

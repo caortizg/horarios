@@ -29,6 +29,20 @@
                         {{ form_widget(form.prioridad, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
                     </div>
                 </div>
+                {{ form_errors(form.tiempoMDiario) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.tiempoMDiario) }}</span>
+                        {{ form_widget(form.tiempoMDiario, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
+                {{ form_errors(form.tiempoMSemanal) }}
+                <div class=" col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.tiempoMSemanal) }}</span>
+                        {{ form_widget(form.tiempoMSemanal, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

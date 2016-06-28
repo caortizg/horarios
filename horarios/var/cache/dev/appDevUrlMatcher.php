@@ -146,6 +146,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_usuario_actividad_vincular')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadUsuarioController::vincularAction',  'id' => 0,));
             }
 
+            // caog_horarios_usuario_franjas_publicas_crear
+            if (0 === strpos($pathinfo, '/user/franjas/publicas/crear') && preg_match('#^/user/franjas/publicas/crear(?:/(?P<idUser>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_usuario_franjas_publicas_crear')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadFranjaController::createAction',  'idUser' => 0,));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/empresa')) {

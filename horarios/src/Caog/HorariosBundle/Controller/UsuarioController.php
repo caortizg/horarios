@@ -56,7 +56,8 @@ class UsuarioController extends Controller{
             ->getRepository('CaogHorariosBundle:ActividadFranja');
  
         $query = $repository->createQueryBuilder('af')
-            ->leftJoin('CaogHorariosBundle:ActividadUsuario','au',"WITH",'af.actUsu = au.id AND au.usuario = '.$id)
+            ->leftJoin('CaogHorariosBundle:ActividadUsuario','au',"WITH",'af.actUsu = au.id')
+            ->where('au.usuario = '.$id)
             ->orderBy('af.actFraDia', 'ASC')
             ->orderBy('af.actHoraInicio', 'ASC')
             ->getQuery();

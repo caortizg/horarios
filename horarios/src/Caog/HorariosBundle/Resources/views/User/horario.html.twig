@@ -24,7 +24,7 @@
                             {% set ti = ti|date_modify("+"~h~" hour")|date("G:i") %}
                             {% set ti = ti|date_modify("+"~m~" minute")|date("G:i") %}
                             <div style="height: 40px; background-color:rgba(158, 3, 3, 0.22);">
-                                Ocupado<br>
+                                {{franja.actUsu.nombre}}<br>
                                 ({{franja.actHoraInicio|date('G:i')}}-{{ti}})                      
                             </div>
                         {% endif %}
