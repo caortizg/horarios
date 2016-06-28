@@ -170,9 +170,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'caog_horarios_empresa_actividad_register')), array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::registrarAction',));
                 }
 
-                // caog_horarios_empresa_actividad_getActividadEmpresaAjax
-                if ($pathinfo === '/empresa/actividad/getActividadEmpresaAjax') {
-                    return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::getActividadEmpresaAjaxAction',  '_route' => 'caog_horarios_empresa_actividad_getActividadEmpresaAjax',);
+                if (0 === strpos($pathinfo, '/empresa/actividad/getActividadEmpresa')) {
+                    // caog_horarios_empresa_actividad_getActividadEmpresaAjax
+                    if ($pathinfo === '/empresa/actividad/getActividadEmpresaAjax') {
+                        return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::getActividadEmpresaAjaxAction',  '_route' => 'caog_horarios_empresa_actividad_getActividadEmpresaAjax',);
+                    }
+
+                    // caog_horarios_empresa_actividad_getActividadEmpresa
+                    if ($pathinfo === '/empresa/actividad/getActividadEmpresa') {
+                        return array (  '_controller' => 'Caog\\HorariosBundle\\Controller\\ActividadEmpresaController::getActividadEmpresaAction',  '_route' => 'caog_horarios_empresa_actividad_getActividadEmpresa',);
+                    }
+
                 }
 
                 // caog_horarios_empresa_actividad_list

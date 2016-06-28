@@ -44,6 +44,11 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="estado" type="integer" column="estado" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     
     <one-to-many
             field="franjas"

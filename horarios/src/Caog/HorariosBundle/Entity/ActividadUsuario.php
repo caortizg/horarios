@@ -421,4 +421,33 @@ class ActividadUsuario
     {
         return $this->actividadEmpresa;
     }
+    /**
+     * @var boolean
+     */
+    private $estado;
+
+
+    /**
+     * Set estado
+     *
+     * @param boolean $estado
+     *
+     * @return ActividadUsuario
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return boolean
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
 }
