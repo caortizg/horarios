@@ -92,7 +92,7 @@ class ActividadEmpresaController extends Controller{
                 'departamento'=>$actividad_empresa->getDepartamento(),
                 'ciudad'=>$actividad_empresa->getCiudad(),
                 'localidad'=>$actividad_empresa->getLocalidad(),
-                'direccion'=>$actividad_empresa->getLocalidad()
+                'direccion'=>$actividad_empresa->getDireccion()
                 );
             
             
