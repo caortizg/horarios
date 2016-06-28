@@ -55,7 +55,17 @@ class ActividadUsuarioType  extends AbstractType{
                     'placeholder'=>'Seleccione',
                     'required'=>false,
                 ))
+                ->add('actividadEmpresa',  EntityType::class,array(
+                    // query choices from this entity
+                    'class' => 'CaogHorariosBundle:ActividadEmpresa',
+
+                    // use the User.username property as the visible option string
+                    'choice_label' => 'nombre',
+                    'placeholder'=>'Seleccione',
+                    'required'=>false,
+                ))
                 ->add('save', SubmitType::class, array('label' => 'Crear actividad'));
+        
     }
 
     public function getName() {

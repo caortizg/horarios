@@ -10,6 +10,7 @@ namespace Caog\HorariosBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Caog\HorariosBundle\Entity\ActividadEmpresa;
 use Caog\HorariosBundle\Form\Empresa\ActividadType;
 
@@ -59,5 +60,23 @@ class ActividadEmpresaController extends Controller{
                     'CaogHorariosBundle:Empresa:Actividad/register.html.twig',
                     $parametros
                 );
+    }
+    
+    public function getActividadEmpresaAjaxAction(Request $request){
+         $res=array();
+        if($request->isMethod('POST')){
+            $empresa_id=$request->get('empresa_id');
+            $actividad_empresa= $this->getDoctrine()
+            ->getRepository('CaogHorariosBundle:ActividadEmpresa')
+            ->findBy(array('empresa'=>$empresa_id));
+            foreach($actividad_empresa as $actividad){
+               $res[]=array('id'=>$actividad->getId(),'name'=>$actividad->getNombre());
+            }
+            
+        }
+        $response = new Response(json_encode($res));
+        $response->headers->set('Content-Type', 'application/json');
+       
+        return $response;
     }
 }

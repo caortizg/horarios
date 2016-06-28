@@ -26,6 +26,8 @@
                         {{ form_widget(form.tipo, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
                     </div>
                 </div>
+            </div> <br>
+            <div class="row">
                 {{ form_errors(form.prioridad) }}
                 <div class=" col-md-6">
                     <div class="input-group">
@@ -40,9 +42,20 @@
                         {{ form_widget(form.empresa, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
                     </div>
                 </div>
+            </div><br>
+               
+            <div class="row" >
+                {{ form_errors(form.actividadEmpresa) }}
+                <div class=" col-md-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">{{ form_label(form.actividadEmpresa) }}</span>
+                        {{ form_widget(form.actividadEmpresa, { 'attr': {'class': 'form-control col-md-6','aria-describedby': 'basic-addon3'} }) }}
+                    </div>
+                </div>
             </div>
+         </div>
         </div>
-    </div>
+    
 
     <div class="panel panel-default">
         <div class="panel-heading">Datos de localizacion</div>
@@ -93,5 +106,5 @@
 </div>
 
 {{ form_end(form) }}
-
+<input type="hidden" value="{{path('caog_horarios_empresa_actividad_getActividadEmpresaAjax')}}" id="getActividadEmpresaAjax">
 {% endblock %}
