@@ -13,7 +13,10 @@ $(document).ready(function(){
           $('#actividad_usuario_actividadEmpresa').parent('div').hide();
         }
     });
-    
+    $('#actividad_usuario_actividadEmpresa').on('change',function(){
+        var actividad_id=$(this).val();
+        autoCompletar(actividad_id);
+    });
     $('#actividad_usuario_empresa').on('change',function(){
         var empresa_id=$(this).val();
         cargarActividadEmpresa(empresa_id);
@@ -49,6 +52,42 @@ function cargarActividadEmpresa(empresa_id){
         var sele_final='<option value="">Seleccione</option>'+select;
         $('#actividad_usuario_actividadEmpresa').html(sele_final);
         $('#actividad_usuario_actividadEmpresa').focus();
+    },
+ 
+    // código a ejecutar si la petición falla;
+    // son pasados como argumentos a la función
+    // el objeto de la petición en crudo y código de estatus de la petición
+    error : function(xhr, status) {
+        alert('Disculpe, existió un problema');
+    }
+ 
+});
+}
+function autoCompletar(actividad_id){
+    $.ajax({
+    // la URL para la petición
+    url : $('#getActividadEmpresa').val(),
+ 
+    // la información a enviar
+    // (también es posible utilizar una cadena de datos)
+    data : { actividad_id : actividad_id },
+ 
+    // especifica si será una petición POST o GET
+    type : 'POST',
+ 
+    // el tipo de información que se espera de respuesta
+    dataType : 'json',
+ 
+    // código a ejecutar si la petición es satisfactoria;
+    // la respuesta es pasada como argumento a la función
+    success : function(json) {
+        console.log(json);
+        $('#actividad_usuario_pais').val(json.pais);
+        $('#actividad_usuario_departamento').val(json.departamento);
+        $('#actividad_usuario_ciudad').val(json.ciudad);
+        $('#actividad_usuario_localidad').val(json.localidad);
+        $('#actividad_usuario_direccion').val(json.direccion);
+        
     },
  
     // código a ejecutar si la petición falla;

@@ -79,4 +79,27 @@ class ActividadEmpresaController extends Controller{
        
         return $response;
     }
+    public function getActividadEmpresaAction(Request $request){
+        $res=array();
+        if($request->isMethod('POST')){
+            $actividad_id=$request->get('actividad_id');
+            $actividad_empresa= $this->getDoctrine()
+            ->getRepository('CaogHorariosBundle:ActividadEmpresa')
+            ->find($actividad_id);
+            
+            $res=array(
+                'pais'=>$actividad_empresa->getPais(),
+                'departamento'=>$actividad_empresa->getDepartamento(),
+                'ciudad'=>$actividad_empresa->getCiudad(),
+                'localidad'=>$actividad_empresa->getLocalidad(),
+                'direccion'=>$actividad_empresa->getLocalidad()
+                );
+            
+            
+        }
+        $response = new Response(json_encode($res));
+        $response->headers->set('Content-Type', 'application/json');
+       
+        return $response; 
+    }
 }
